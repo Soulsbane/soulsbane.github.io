@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="./prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="./raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="./raijin/debugutils.html" class=" module">debugutils</a>
+							</li>
+							<li>
+								<a href="./raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="./raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="./raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="./symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th>
+					<th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./raijin/commandlineargs.html">raijin.commandlineargs</a>
+				</td>
+				<td>
+	This module contains a simple class that processes command line arguments and stores
+	them in a hashtable. The hash table is static so this class object can be created multiple
+	times without having to reinitialize it when the arguments from main.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/debugutils.html">raijin.debugutils</a>
+				</td>
+				<td>
+   At present only a function for outputing a debug string.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/keyvalueconfig.html">raijin.keyvalueconfig</a>
+				</td>
+				<td>
+	This module manages a config file format in the form of key=value. Much like an ini file but simpler.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/stringutils.html">raijin.stringutils</a>
+				</td>
+				<td>
+	This module contains a few additons to handling strings.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/typeutils.html">raijin.typeutils</a>
+				</td>
+				<td>
+   Various functions to determine types at runtime.
+
+				</td>
+			</tr>
+			</table>
+			<section>
+				<h2>Authors</h2>
+			</section>
+			<section>
+				<h2>Copyright</h2>
+			</section>
+			<section>
+				<h2>License</h2>
+			</section>
+		</div>
+	</body>
+</html>

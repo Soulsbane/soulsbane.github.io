@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function CommandLineArgs.safeGet</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/commandlineargs.html" class="selected module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function CommandLineArgs.safeGet</h1>
+			<section>
+				<p>	Retrieves the raw value passed via the command line in a safe way.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+final T safeGet(T)(
+&nbsp;&nbsp;const size_t index,
+&nbsp;&nbsp;string defaultValue = string.init
+) @safe;</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="index">index</td><td> The integer value denoting the number of the argument passed.</td></tr>
+<tr><td id="defaultValue">defaultValue</td><td> Default value to use if the <a href="../../raijin/commandlineargs/CommandLineArgs.safeGet.html#index"><code class="prettyprint lang-d">index</code></a> is out of range.
+</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>		The value of the command line argument at <a href="../../raijin/commandlineargs/CommandLineArgs.safeGet.html#index"><code class="prettyprint lang-d">index</code></a> or <a href="../../raijin/commandlineargs/CommandLineArgs.safeGet.html#defaultValue"><code class="prettyprint lang-d">defaultValue</code></a> otherwise.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

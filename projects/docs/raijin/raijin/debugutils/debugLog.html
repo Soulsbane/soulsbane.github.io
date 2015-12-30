@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function debugLog</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class="selected module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function debugLog</h1>
+			<section>
+				<p>   Outputs a message to stdout with function name, line number and file name.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+void debugLog(
+&nbsp;&nbsp;const(string) msg,
+&nbsp;&nbsp;const(int) lineNumber = __LINE__,
+&nbsp;&nbsp;const(string) fileName = __FILE__,
+&nbsp;&nbsp;const(string) funcName = __FUNCTION__
+) @trusted;</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="msg">msg</td><td> The message to be print to stdout.</td></tr>
+<tr><td id="lineNumber">lineNumber</td><td> _LINE__</td></tr>
+<tr><td id="fileName">fileName</td><td> _FILE__</td></tr>
+<tr><td id="funcName">funcName</td><td> _FUNCTION__</td></tr>
+</table>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>
