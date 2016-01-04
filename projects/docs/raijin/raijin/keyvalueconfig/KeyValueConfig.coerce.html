@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function KeyValueConfig.opIndex</title>
+		<title>Function KeyValueConfig.coerce</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -49,9 +49,9 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function KeyValueConfig.opIndex</h1>
+			<h1>Function KeyValueConfig.coerce</h1>
 			<section>
-				<p>	Allows config values to be accessed as you would with an associative array.
+				<p>	Converts the value of <a href="../../raijin/keyvalueconfig/KeyValueConfig.coerce.html#key"><code class="prettyprint lang-d">key</code></a> to type of T. Works the same as std.variant's <code class="prettyprint lang-d">coerce</code>.
 </p>
 <section>
 </section>
@@ -59,18 +59,18 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-std.<wbr/>variant.<wbr/>VariantN!(32L) opIndex(
-&nbsp;&nbsp;string key
+T coerce(T)(
+&nbsp;&nbsp;const string key
 ) @trusted;</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="key">key</td><td> Name of the value to retrieve
+<tr><td id="key">key</td><td> Name of the <a href="../../raijin/keyvalueconfig/KeyValueConfig.coerce.html#key"><code class="prettyprint lang-d">key</code></a> to retrieve.
 </td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>		The string value associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndex.html#key"><code class="prettyprint lang-d">key</code></a>.
+<p>		T = The converted value.
 </p>
 </section>
 

@@ -65,8 +65,8 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-T get(T)(
-&nbsp;&nbsp;const string key
+std.<wbr/>variant.<wbr/>VariantN!(32L) get(
+&nbsp;&nbsp;const(string) key
 ) @safe;</pre>
 					</section>
 <section><h3>Parameters</h3>
@@ -92,8 +92,8 @@ T get(T)(
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-T get(T)(
-&nbsp;&nbsp;const string key,
+std.<wbr/>variant.<wbr/>VariantN!(32L) get(
+&nbsp;&nbsp;const(string) key,
 &nbsp;&nbsp;string defaultValue
 ) @safe;</pre>
 					</section>
@@ -121,11 +121,11 @@ T get(T)(
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-T get(T)(
-&nbsp;&nbsp;const string group,
-&nbsp;&nbsp;const string key,
+std.<wbr/>variant.<wbr/>VariantN!(32L) get(
+&nbsp;&nbsp;const(string) group,
+&nbsp;&nbsp;const(string) key,
 &nbsp;&nbsp;string defaultValue
-) @safe;</pre>
+) @trusted;</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

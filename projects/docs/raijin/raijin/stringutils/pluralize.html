@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function pluralize</title>
+		<title>pluralize - multiple declarations</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -49,8 +49,41 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function pluralize</h1>
+			<h1>pluralize - multiple declarations</h1>
+			<ul>
+				<li>Function pluralize</li>
+				<li>Function pluralize</li>
+			</ul>
 			<section>
+				<h2>Function pluralize</h2>
+				<p>	Pluralizes a string.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+string pluralize(
+&nbsp;&nbsp;const(string) text,
+&nbsp;&nbsp;const(string) pluralizeToWord = null
+);</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="text">text</td><td> The word to <code class="prettyprint lang-d">pluralize</code>.</td></tr>
+<tr><td id="pluralizeToWord">pluralizeToWord</td><td> The word to use when a value needs to be pluralized
+</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>		The pluralized string.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function pluralize</h2>
 				<p>	Pluralizes a string if <a href="../../raijin/stringutils/pluralize.html#count"><code class="prettyprint lang-d">count</code></a> is greater than one.
 </p>
 <section>
@@ -61,13 +94,13 @@ $('#symbolSearchPane').show();
 						<pre class="code prettyprint lang-d prototype">
 string pluralize(
 &nbsp;&nbsp;const(string) text,
-&nbsp;&nbsp;const(uint) count,
+&nbsp;&nbsp;const(ulong) count,
 &nbsp;&nbsp;const(string) pluralizeToWord = null
 );</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="text">text</td><td> The word to <code class="prettyprint lang-d">pluralize</code>.</td></tr>
+<tr><td id="text">text</td><td> The word to <a href="../../raijin/stringutils/pluralize.html"><code class="prettyprint lang-d">pluralize</code></a>.</td></tr>
 <tr><td id="count">count</td><td> The number of words.</td></tr>
 <tr><td id="pluralizeToWord">pluralizeToWord</td><td> The word to use when a value needs to be pluralized
 </td></tr>

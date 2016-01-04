@@ -60,12 +60,14 @@ $('#symbolSearchPane').show();
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
 bool isFalse(T)(
-&nbsp;&nbsp;const T value
+&nbsp;&nbsp;const T value,
+&nbsp;&nbsp;const AllowNumericBooleanValues allowInteger = AllowNumericBooleanValues.yes
 );</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="value">value</td><td> The <a href="../../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a> to check for a false <a href="../../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a>
+<tr><td id="value">value</td><td> The <a href="../../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a> to check for a false <a href="../../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a></td></tr>
+<tr><td id="allowInteger">allowInteger</td><td> Set to allowNumericBooleanValues.yes if a false <a href="../../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a> can be a numeric 0
 </td></tr>
 </table>
 </section>

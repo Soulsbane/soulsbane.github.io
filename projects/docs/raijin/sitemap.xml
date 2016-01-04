@@ -31,6 +31,7 @@
 <url><loc>http://127.0.0.1/raijin/debugutils/debugLog.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.coerce.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.contains.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.contains.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.containsGroup.html</loc></url>
@@ -53,6 +54,7 @@
 <url><loc>http://127.0.0.1/raijin/stringutils.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils/find.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils/isVowelChar.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/stringutils/pluralize.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils/pluralize.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils/removeLeadingChars.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/typeutils.html</loc></url>
