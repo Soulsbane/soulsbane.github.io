@@ -16,13 +16,25 @@
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
 								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
+							</li>
+							<li>
 								<a href="../../raijin/keyvalueconfig.html" class="selected module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
 								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
@@ -60,14 +72,12 @@ $('#symbolSearchPane').show();
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
 bool loadString(
-&nbsp;&nbsp;const(string) text,
-&nbsp;&nbsp;string fileName = "app.config"
+&nbsp;&nbsp;const(string) text
 ) @safe;</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="text">text</td><td> The string to process.</td></tr>
-<tr><td id="fileName">fileName</td><td> The name of the file to <a href="../../raijin/keyvalueconfig/KeyValueConfig.save.html"><code class="prettyprint lang-d">save</code></a> processed strings key/values. If no <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadString.html#fileName"><code class="prettyprint lang-d">fileName</code></a> is provided values will NOT BE SAVED!</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>

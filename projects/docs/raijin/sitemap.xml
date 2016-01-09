@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>http://127.0.0.1/index.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/appconfig.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/appconfig/AppConfig.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/commandlineargs.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/commandlineargs/ArgValues.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/commandlineargs/ArgValues.defaultValue.html</loc></url>
@@ -27,8 +29,18 @@
 <url><loc>http://127.0.0.1/raijin/commandlineargs/CommandLineArgs.processArgs.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/commandlineargs/CommandLineArgs.safeGet.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/commandlineargs/CommandLineArgs.setProgramVersion.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath/ConfigPath.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath/ConfigPath.createConfigDir.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath/ConfigPath.getConfigDir.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath/ConfigPath.removeConfigDir.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath/ConfigPath.this.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/configpath/ConfigPath.this.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/debugutils.html</loc></url>
-<url><loc>http://127.0.0.1/raijin/debugutils/debugLog.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/fileutils.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/fileutils/ensureFileExists.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/fileutils/isFileHidden.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/fileutils/removeFileIfExists.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.coerce.html</loc></url>
@@ -51,6 +63,14 @@
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.save.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.set.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/keyvalueconfig/KeyValueConfig.set.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/ensurePathExists.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/ensurePathExists.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/getAppPath.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/getAppPath.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/isInPath.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/removePathIfExists.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/pathutils/removePathIfExists.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils/find.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/stringutils/isVowelChar.html</loc></url>
