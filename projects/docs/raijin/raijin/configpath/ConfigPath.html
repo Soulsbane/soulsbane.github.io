@@ -140,6 +140,19 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">auto path = new ConfigPath("DlangUnitOrg", "MyUnitTestApp");
+auto pathNoOrganization = new ConfigPath;
+
+import std.stdio;
+writeln("Testing ConfigPath class...");
+writeln(path.getConfigDir("tests"));
+writeln(pathNoOrganization.getConfigDir("tests"));
+
+writeln();
+</pre>
+</section>
 
 			</section>
 			<section>

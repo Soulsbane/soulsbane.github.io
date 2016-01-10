@@ -97,6 +97,19 @@ string getAppPath(
 <tr><td id="path">path</td><td> The <a href="../../raijin/pathutils/getAppPath.html#path"><code class="prettyprint lang-d">path</code></a> to append to the application <a href="../../raijin/pathutils/getAppPath.html#path"><code class="prettyprint lang-d">path</code></a>.</td></tr>
 </table>
 </section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">immutable string notFound =  <a href="../../raijin/pathutils/isInPath.html">isInPath</a>("fakeprogram");
+immutable string found =  <a href="../../raijin/pathutils/isInPath.html">isInPath</a>("ls");
+
+assert(found.length);
+assert(notFound == null);
+assert(<a href="../../raijin/pathutils/ensurePathExists.html">ensurePathExists</a>("my", "test", "dir"));
+assert(<a href="../../raijin/pathutils/removePathIfExists.html">removePathIfExists</a>("my"));
+assert(<a href="../../raijin/pathutils/ensurePathExists.html">ensurePathExists</a>("my/test/dir"));
+assert(<a href="../../raijin/pathutils/removePathIfExists.html">removePathIfExists</a>("my"));
+</pre>
+</section>
 
 			</section>
 			<section>

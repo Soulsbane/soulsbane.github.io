@@ -87,6 +87,24 @@ bool isBoolean(T)(
 <p>       true if the <a href="../../raijin/typeutils/isBoolean.html#value"><code class="prettyprint lang-d">value</code></a> is a boolean false otherwise.
 </p>
 </section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">assert("0".isBoolean == true);
+assert("1".isBoolean == true);
+assert("2".isBoolean == false);
+
+assert("true".isBoolean == true);
+assert("false".isBoolean == true);
+assert("trues".isBoolean == false);
+
+assert("0".isBoolean(AllowNumericBooleanValues.no) == false);
+assert("1".isBoolean(AllowNumericBooleanValues.no) == false);
+
+assert(0.isBoolean == true);
+assert(1.isBoolean == true);
+assert(2.isBoolean == false);
+</pre>
+</section>
 
 			</section>
 			<section>

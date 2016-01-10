@@ -270,6 +270,19 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">auto arguments = ["--flag", "value=this is a test"];
+auto args = new CommandLineArgs;
+
+args.addCommand("flag", "true", "A test flag");
+args.addCommand("value", "the default value", "Sets value");
+args.processArgs(arguments);
+
+assert(args.get!bool("flag") == true);
+assert(args.get("value") == "this is a test");
+</pre>
+</section>
 
 			</section>
 			<section>

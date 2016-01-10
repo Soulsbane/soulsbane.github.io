@@ -122,6 +122,21 @@ string pluralize(
 <p>		The pluralized string if more than one of type or singular form otherwise.
 </p>
 </section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">assert("fly"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(10) == "flies");
+assert("fly"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(1) == "fly");
+assert("book"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(10) == "books");
+assert("book"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(1) == "book");
+assert("boy"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(2) == "boys");
+assert("key"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(2) == "keys");
+assert("key"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(2, "keyz") == "keyz");
+assert("key"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(1, "keyz") == "key");
+assert("fly"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>(2, "fliez") == "fliez");
+assert("cat"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a> == "cats");
+assert("cat"<a href="../../raijin/stringutils/pluralize.html">.pluralize</a>("catz") == "catz");
+</pre>
+</section>
 
 			</section>
 			<section>

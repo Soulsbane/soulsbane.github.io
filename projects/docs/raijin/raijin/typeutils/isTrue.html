@@ -87,6 +87,18 @@ bool isTrue(T)(
 <p>       true if the <a href="../../raijin/typeutils/isTrue.html#value"><code class="prettyprint lang-d">value</code></a> is true false otherwise.
 </p>
 </section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">assert(isTrue("true") == true);
+assert(isTrue("false") == false);
+assert(isTrue("1") == true);
+assert(isTrue("0") == false);
+assert(isTrue("12345") == false);
+assert(isTrue("trues") == false);
+
+assert("1".isTrue(AllowNumericBooleanValues.no) == false);
+</pre>
+</section>
 
 			</section>
 			<section>

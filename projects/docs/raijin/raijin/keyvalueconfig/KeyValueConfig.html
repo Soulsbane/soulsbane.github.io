@@ -259,6 +259,170 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getBool.html" class="public">
+										<code>getBool</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a bool.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getByte.html" class="public">
+										<code>getByte</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a byte.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getDouble.html" class="public">
+										<code>getDouble</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a double.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getFloat.html" class="public">
+										<code>getFloat</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a float.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getInt.html" class="public">
+										<code>getInt</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a int.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getLong.html" class="public">
+										<code>getLong</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a long.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getReal.html" class="public">
+										<code>getReal</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a real.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getShort.html" class="public">
+										<code>getShort</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a short.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getString.html" class="public">
+										<code>getString</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a string.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">string text = "
+	aBool=true
+	decimal = 3443.443
+	number=12071
+	#Here is a comment
+	sentence=This is a really long sentence to test for a really long value string!
+	time=12:04
+	[section]
+	groupSection=is really cool if this works!
+	japan=true
+	babymetal=the one
+	[another]
+	#And another comment!
+	world=hello
+	japan=false
+";
+
+KeyValueConfig config;
+
+immutable bool loaded = config.loadString(text);
+assert(loaded, "Failed to load string!");
+
+assert(config.containsGroup("section"));
+config.removeGroup("section");
+assert(config.containsGroup("section") == false);
+
+assert(config.get("aBool").coerce!bool == true);
+assert(config.getBool("aBool")); // Syntactic sugar
+assert(config["aBool"].coerce!bool == true); // Also works but rather awkward
+assert(config.coerce!bool("aBool") == true); // Also works and more natural
+
+assert(config.contains("time"));
+
+auto number = config["number"];
+
+assert(number == 12071);
+assert(config["decimal"] == 3443.443);
+
+assert(config.contains("another.world"));
+assert(config["another.world"] == "hello");
+config.remove("another.world");
+assert(config.contains("another.world") == false);
+assert(config.contains("anothers", "world") == false);
+
+assert(config.contains("number"));
+config.remove("number");
+assert(config.contains("number") == false);
+
+assert(config["another.japan"] == false);
+
+writeln("KeyValueConfig: Testing <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html">getGroup</a>...");
+
+auto group = config.getGroup("another");
+
+foreach(value; group)
+{
+	writeln(value);
+}
+
+writeln();
+
+config.set("aBool", false);
+assert(config["aBool"].coerce!bool == false);
+config["aBool"] = true;
+assert(config["aBool"].coerce!bool == true);
+assert(config["aBool"].toString == "true");
+
+debug config.save();
+debug config.save("custom-config-format.dat");
+</pre>
+</section>
 
 			</section>
 			<section>

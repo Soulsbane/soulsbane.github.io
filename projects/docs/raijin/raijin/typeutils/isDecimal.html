@@ -85,6 +85,13 @@ bool isDecimal(
 <p>       true if the <a href="../../raijin/typeutils/isDecimal.html#value"><code class="prettyprint lang-d">value</code></a> is a decimal false otherwise.
 </p>
 </section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">assert("13".isDecimal == false);
+assert("13.333333".isDecimal == true);
+assert("zzzz".isDecimal == false);
+</pre>
+</section>
 
 			</section>
 			<section>
