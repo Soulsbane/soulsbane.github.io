@@ -68,21 +68,6 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function CommandLineArgs.opIndexAssign</h2>
-				<p>	Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-final void opIndexAssign(
-&nbsp;&nbsp;string value,
-&nbsp;&nbsp;immutable(char[]) key
-) @safe;</pre>
-					</section>
-
-			</section>
-			<section>
-				<h2>Function CommandLineArgs.opIndexAssign</h2>
 				<p>	Assigns a value to a commandline argument stored internally but uses <a href="../../raijin/commandlineargs/ArgValues.html"><code class="prettyprint lang-d">ArgValues</code></a> as the value.
 </p>
 
@@ -91,8 +76,23 @@ final void opIndexAssign(
 						<pre class="code prettyprint lang-d prototype">
 final void opIndexAssign(
 &nbsp;&nbsp;<a href="../../raijin/commandlineargs/ArgValues.html">ArgValues</a> values,
-&nbsp;&nbsp;immutable(char[]) key
-) @safe;</pre>
+&nbsp;&nbsp;const(string) key
+) @trusted;</pre>
+					</section>
+
+			</section>
+			<section>
+				<h2>Function CommandLineArgs.opIndexAssign</h2>
+				<p>	Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+final void opIndexAssign(T)(
+&nbsp;&nbsp;T value,
+&nbsp;&nbsp;const string key
+) @trusted;</pre>
 					</section>
 
 			</section>

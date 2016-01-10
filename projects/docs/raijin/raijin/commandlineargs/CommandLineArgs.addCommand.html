@@ -76,12 +76,12 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-final void addCommand(
-&nbsp;&nbsp;const(string) key,
-&nbsp;&nbsp;immutable(char[]) defaultValue,
-&nbsp;&nbsp;immutable(char[]) description,
-&nbsp;&nbsp;std.<wbr/>typecons.<wbr/>Flag!("requiredArg") required = cast(Flag)false
-) @safe;</pre>
+final void addCommand(T)(
+&nbsp;&nbsp;const string key,
+&nbsp;&nbsp;const T defaultValue,
+&nbsp;&nbsp;const string description,
+&nbsp;&nbsp;RequiredArg required = RequiredArg.no
+) @trusted;</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
@@ -105,8 +105,8 @@ final void addCommand(
 						<pre class="code prettyprint lang-d prototype">
 final void addCommand(
 &nbsp;&nbsp;const(string) key,
-&nbsp;&nbsp;immutable(<a href="../../raijin/commandlineargs/ArgValues.html">ArgValues</a>) values
-) @safe;</pre>
+&nbsp;&nbsp;const(<a href="../../raijin/commandlineargs/ArgValues.html">ArgValues</a>) values
+) @trusted;</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>

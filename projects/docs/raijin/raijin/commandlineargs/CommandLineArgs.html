@@ -103,6 +103,15 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.coerce.html" class="public">
+										<code>coerce</code>
+									</a>
+								</td>
+								<td>	Converts the value of <a href="../../raijin/commandlineargs/CommandLineArgs.coerce.html#key"><code class="prettyprint lang-d">key</code></a> to type of T. Works the same as std.variant's <code class="prettyprint lang-d">coerce</code>.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../raijin/commandlineargs/CommandLineArgs.contains.html" class="public">
 										<code>contains</code>
 									</a>
@@ -218,7 +227,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>	Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
+								<td>	Assigns a value to a commandline argument stored internally but uses <a href="../../raijin/commandlineargs/ArgValues.html"><code class="prettyprint lang-d">ArgValues</code></a> as the value.
 </td>
 							</tr>
 							<tr>
@@ -227,7 +236,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>	Assigns a value to a commandline argument stored internally but uses <a href="../../raijin/commandlineargs/ArgValues.html"><code class="prettyprint lang-d">ArgValues</code></a> as the value.
+								<td>	Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
 </td>
 							</tr>
 							<tr>
@@ -270,6 +279,97 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getBool.html" class="public">
+										<code>getBool</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a bool.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getByte.html" class="public">
+										<code>getByte</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a byte.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getDouble.html" class="public">
+										<code>getDouble</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a double.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getFloat.html" class="public">
+										<code>getFloat</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a float.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getInt.html" class="public">
+										<code>getInt</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a int.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getLong.html" class="public">
+										<code>getLong</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a long.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getReal.html" class="public">
+										<code>getReal</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a real.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getShort.html" class="public">
+										<code>getShort</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a short.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.getString.html" class="public">
+										<code>getString</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a string.
+</td>
+							</tr>
+						</table>
+					</section>
 <section><h3>Example</h3>
 
 <pre class="code prettyprint lang-d">auto arguments = ["--flag", "value=this is a test"];
@@ -279,7 +379,7 @@ args.addCommand("flag", "true", "A test flag");
 args.addCommand("value", "the default value", "Sets value");
 args.processArgs(arguments);
 
-assert(args.get!bool("flag") == true);
+assert(args.getBool("flag") == true);
 assert(args.get("value") == "this is a test");
 </pre>
 </section>
