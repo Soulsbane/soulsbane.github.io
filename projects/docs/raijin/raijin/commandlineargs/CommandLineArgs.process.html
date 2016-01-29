@@ -19,6 +19,9 @@
 								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class="selected module">commandlineargs</a>
 							</li>
 							<li>
@@ -31,9 +34,6 @@
 								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
 							</li>
 							<li>
-								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
-							</li>
-							<li>
 								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
@@ -41,6 +41,9 @@
 							</li>
 							<li>
 								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
 							</li>
 						</ul>
 							</li>
@@ -64,7 +67,7 @@ $('#symbolSearchPane').show();
 			<h1>Function CommandLineArgs.process</h1>
 			<section>
 				<p>	Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> passed to the program. This is the internal command line
-	argument processing method. The method <a href="../../raijin/commandlineargs/CommandLineArgs.processArgs.html"><code class="prettyprint lang-d">processArgs</code></a> should be used as it simplifies handling of command line
+	argument processing method. The method processArgs should be used as it simplifies handling of command line
 	<a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a>.
 </p>
 <section>
@@ -73,21 +76,21 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-auto final std.<wbr/>typecons.<wbr/>__T5TupleTE6raijin15commandlineargs19CommandLineArgTypesVAyaa4_74797065TAyaVAyaa7_636f6d6d616e64Z.<wbr/>Tuple process(
+bool process(
 &nbsp;&nbsp;string[] arguments,
-&nbsp;&nbsp;std.<wbr/>typecons.<wbr/>Flag!("ignoreFirstArg") ignoreFirstArg = cast(Flag)false,
+&nbsp;&nbsp;std.<wbr/>typecons.<wbr/>Flag!("IgnoreNonArgs") ignoreNonArgs = cast(Flag)false,
 &nbsp;&nbsp;std.<wbr/>typecons.<wbr/>Flag!("allowInvalidArgs") allowInvalidArgs = cast(Flag)false
-) @trusted;</pre>
+);</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="arguments">arguments</td><td> The <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> that are sent from main()</td></tr>
-<tr><td id="ignoreFirstArg">ignoreFirstArg</td><td> Ignore the first argument passed and continue processing the remaining <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a></td></tr>
-<tr><td id="allowInvalidArgs">allowInvalidArgs</td><td> Any invalid <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> will be ignored and <a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArgs.html"><code class="prettyprint lang-d">onInvalidArgs</code></a> won't be called.</td></tr>
+<tr><td id="ignoreNonArgs">ignoreNonArgs</td><td> Ignore the first argument passed and continue processing the remaining <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a></td></tr>
+<tr><td id="allowInvalidArgs">allowInvalidArgs</td><td> Any invalid <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> will be ignored and won't be called.</td></tr>
 </table>
 </section>
 <section><h3>Note</h3>
-<p>		Setting allowInvalidArgs.yes will also cause <a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArgs.html"><code class="prettyprint lang-d">onInvalidArgs</code></a> to not be fired. Resulting in invalid data in a command.
+<p>		Setting allowInvalidArgs.yes will also cause onInvalidArgs to not be fired. Resulting in invalid data in a command.
 </p>
 </section>
 

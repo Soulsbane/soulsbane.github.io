@@ -19,6 +19,9 @@
 								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class="selected module">commandlineargs</a>
 							</li>
 							<li>
@@ -31,9 +34,6 @@
 								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
 							</li>
 							<li>
-								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
-							</li>
-							<li>
 								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
@@ -41,6 +41,9 @@
 							</li>
 							<li>
 								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
 							</li>
 						</ul>
 							</li>
@@ -89,16 +92,16 @@ $('#symbolSearchPane').show();
 										<code>addCommand</code>
 									</a>
 								</td>
-								<td>	Registers a command line argument
+								<td>	Registers a command line argument used in year=1942
 </td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.addCommand.html" class="public">
-										<code>addCommand</code>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.addFlag.html" class="public">
+										<code>addFlag</code>
 									</a>
 								</td>
-								<td>	Registers a command line argument
+								<td>	Registers a flag argument eg. --flag
 </td>
 							</tr>
 							<tr>
@@ -121,26 +124,6 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.get.html" class="public">
-										<code>get</code>
-									</a>
-								</td>
-								<td>	Retrieves the value of <a href="../../raijin/commandlineargs/CommandLineArgs.get.html#key"><code class="prettyprint lang-d">key</code></a> where <a href="../../raijin/commandlineargs/CommandLineArgs.get.html#key"><code class="prettyprint lang-d">key</code></a> is the name of the command line argument and converts it to T.
-	T is the the type that returned value should be converted to.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.get.html" class="public">
-										<code>get</code>
-									</a>
-								</td>
-								<td>	Retrieves the value of <a href="../../raijin/commandlineargs/CommandLineArgs.get.html#key"><code class="prettyprint lang-d">key</code></a> where <a href="../../raijin/commandlineargs/CommandLineArgs.get.html#key"><code class="prettyprint lang-d">key</code></a> is the name of the command line argument and converts it to T.
-	T is the the type that returned value should be converted to.
-</td>
-							</tr>
-							<tr>
-								<td>
 									<a href="../../raijin/commandlineargs/CommandLineArgs.getProgramName.html" class="public">
 										<code>getProgramName</code>
 									</a>
@@ -150,20 +133,11 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.isFlag.html" class="public">
-										<code>isFlag</code>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArg.html" class="public">
+										<code>onInvalidArg</code>
 									</a>
 								</td>
-								<td>	Determines if a registered command line argument is a flag.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArgs.html" class="public">
-										<code>onInvalidArgs</code>
-									</a>
-								</td>
-								<td>	Called when an invalid argument is passed on the <a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArgs.html#command"><code class="prettyprint lang-d">command</code></a> line.
+								<td>	Called when an invalid argument is passed on the <a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArg.html#command"><code class="prettyprint lang-d">command</code></a> line.
 </td>
 							</tr>
 							<tr>
@@ -227,7 +201,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>	Assigns a value to a commandline argument stored internally but uses <a href="../../raijin/commandlineargs/ArgValues.html"><code class="prettyprint lang-d">ArgValues</code></a> as the value.
+								<td>	Assigns a value to a commandline argument stored internally but uses ArgValues as the value.
 </td>
 							</tr>
 							<tr>
@@ -246,17 +220,8 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>	Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> passed to the program. This is the internal command line
-	argument processing method. The method <a href="../../raijin/commandlineargs/CommandLineArgs.processArgs.html"><code class="prettyprint lang-d">processArgs</code></a> should be used as it simplifies handling of command line
+	argument processing method. The method processArgs should be used as it simplifies handling of command line
 	<a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a>.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.processArgs.html" class="public">
-										<code>processArgs</code>
-									</a>
-								</td>
-								<td>	Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.processArgs.html#arguments"><code class="prettyprint lang-d">arguments</code></a> passed to the program.
 </td>
 							</tr>
 							<tr>
@@ -372,15 +337,32 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Example</h3>
 
-<pre class="code prettyprint lang-d">auto arguments = ["--flag", "value=this is a test"];
+<pre class="code prettyprint lang-d">auto arguments = ["testapp", "-flag", "-value=this is a test", "-aFloat=4.44"];
 auto args = new CommandLineArgs;
 
-args.addCommand("flag", "true", "A test flag");
-args.addCommand("value", "the default value", "Sets value");
-args.processArgs(arguments);
+args.addFlag("flag", "A test flag");
+args.addCommand!float("aFloat", 3.14, "A float value");
+args.addCommand!int("integer", 100, "Sets value");
+args.addCommand!string("value", "hello world", "Just a silly value.");
+args.process(arguments);
 
 assert(args.getBool("flag") == true);
-assert(args.get("value") == "this is a test");
+assert(args["flag"] == true);
+assert(args.coerce!bool("flag") == true);
+
+import std.math;
+
+float aFloat = args.getFloat("aFloat");
+
+assert(feqrel(args.getFloat("aFloat"), 4.44));
+assert(feqrel(aFloat, 4.44));
+
+assert(feqrel(args.getDouble("aFloat"), 4.44));
+assert(feqrel(args.coerce!double("aFloat"), 4.44));
+
+assert(args.contains("integer") == true);
+assert(args.contains("valuez") == false);
+assert(args["integer"] == 100);
 </pre>
 </section>
 

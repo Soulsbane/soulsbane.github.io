@@ -19,6 +19,9 @@
 								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class="selected module">commandlineargs</a>
 							</li>
 							<li>
@@ -31,9 +34,6 @@
 								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
 							</li>
 							<li>
-								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
-							</li>
-							<li>
 								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
@@ -41,6 +41,9 @@
 							</li>
 							<li>
 								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
 							</li>
 						</ul>
 							</li>
@@ -78,12 +81,13 @@ final std.<wbr/>variant.<wbr/>VariantN!(32L) opIndex(
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="key">key</td><td> Name of the command line argument to <a href="../../raijin/commandlineargs/CommandLineArgs.get.html"><code class="prettyprint lang-d">get</code></a>.
+<tr><td id="key">key</td><td> Name of the command line argument to get.
 </td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>		The value of value of the command line argument to <a href="../../raijin/commandlineargs/CommandLineArgs.get.html"><code class="prettyprint lang-d">get</code></a>
+<p>		The value of value of the command line argument to get. If the <a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><code class="prettyprint lang-d">key</code></a> isn't found it will
+		return an unitialized Variant. Method hasValue can be used to test if the returned value is valid.
 </p>
 
 </section>
