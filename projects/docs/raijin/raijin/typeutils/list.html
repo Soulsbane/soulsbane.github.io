@@ -66,7 +66,9 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function list</h1>
 			<section>
-				<p>Equivalent of PHP's <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code></code> language construct:
+				<p> Equivalent of PHP's <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code></code> language construct:
+	Works with arrays and tuples. Specify <code class="prettyprint lang-d">null</code> as an argument to ignore that index
+	(equivalent of <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code>(x, , y)</code> in PHP).
 </p>
 <section>
 </section>
@@ -78,17 +80,8 @@ auto list(Args...)(
 &nbsp;&nbsp;auto ref Args args
 );</pre>
 					</section>
-<section><h3>http</h3>
-<p>//php.net/manual/en/function.list.php
-</p>
-
-<p>Works with arrays and tuples.
-</p>
-
-<p>Specify <code class="prettyprint lang-d">null</code> as an argument to ignore that index
-</p>
-
-<p>(equivalent of <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code>(x, , y)</code> in PHP).
+<section><h3>See Also</h3>
+<p>		This function was taken from CyberShadows ae lib https://github.com/CyberShadow/ae/
 </p>
 </section>
 <section><h3>Example</h3>

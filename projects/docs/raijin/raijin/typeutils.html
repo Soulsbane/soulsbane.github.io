@@ -65,7 +65,7 @@ $('#symbolSearchPane').show();
 		</nav>
 		<div id="main-contents">
 			<h1>Module raijin.typeutils</h1>
-			<p>   Various functions to determine types at runtime.
+			<p>	Various functions to determine types at runtime.
 </p>
 <section>
 </section>
@@ -85,11 +85,20 @@ $('#symbolSearchPane').show();
 					</tr>
 					<tr>
 						<td>
+							<a id="getDynamicTypeFromString" class="public" href="../raijin/typeutils/getDynamicTypeFromString.html">
+								<code>getDynamicTypeFromString</code>
+							</a>
+						</td>
+						<td>	Converts a string to its appropriate type to be stored in a <a href="../raijin/typeutils/DynamicType.html"><code class="prettyprint lang-d">DynamicType</code></a>.
+</td>
+					</tr>
+					<tr>
+						<td>
 							<a id="isBoolean" class="public" href="../raijin/typeutils/isBoolean.html">
 								<code>isBoolean</code>
 							</a>
 						</td>
-						<td>   Determines if a <a href="../raijin/typeutils/isBoolean.html#value"><code class="prettyprint lang-d">value</code></a> is of type boolean using 0, 1, true and false as qualifiers.
+						<td>	Determines if a <a href="../raijin/typeutils/isBoolean.html#value"><code class="prettyprint lang-d">value</code></a> is of type boolean using 0, 1, true and false as qualifiers.
 </td>
 					</tr>
 					<tr>
@@ -98,7 +107,7 @@ $('#symbolSearchPane').show();
 								<code>isDecimal</code>
 							</a>
 						</td>
-						<td>   Determines if a string is a decimal <a href="../raijin/typeutils/isDecimal.html#value"><code class="prettyprint lang-d">value</code></a>
+						<td>	Determines if a string is a decimal <a href="../raijin/typeutils/isDecimal.html#value"><code class="prettyprint lang-d">value</code></a>
 </td>
 					</tr>
 					<tr>
@@ -107,7 +116,7 @@ $('#symbolSearchPane').show();
 								<code>isFalse</code>
 							</a>
 						</td>
-						<td>   Determines if <a href="../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a> is a false <a href="../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a>
+						<td>	Determines if <a href="../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a> is a false <a href="../raijin/typeutils/isFalse.html#value"><code class="prettyprint lang-d">value</code></a>
 </td>
 					</tr>
 					<tr>
@@ -116,7 +125,7 @@ $('#symbolSearchPane').show();
 								<code>isInteger</code>
 							</a>
 						</td>
-						<td>   Determines if a string is an integer <a href="../raijin/typeutils/isInteger.html#value"><code class="prettyprint lang-d">value</code></a>.
+						<td>	Determines if a string is an integer <a href="../raijin/typeutils/isInteger.html#value"><code class="prettyprint lang-d">value</code></a>.
 </td>
 					</tr>
 					<tr>
@@ -125,7 +134,7 @@ $('#symbolSearchPane').show();
 								<code>isTrue</code>
 							</a>
 						</td>
-						<td>   Determines if <a href="../raijin/typeutils/isTrue.html#value"><code class="prettyprint lang-d">value</code></a> is a true <a href="../raijin/typeutils/isTrue.html#value"><code class="prettyprint lang-d">value</code></a>
+						<td>	Determines if <a href="../raijin/typeutils/isTrue.html#value"><code class="prettyprint lang-d">value</code></a> is a true <a href="../raijin/typeutils/isTrue.html#value"><code class="prettyprint lang-d">value</code></a>
 </td>
 					</tr>
 					<tr>
@@ -134,42 +143,28 @@ $('#symbolSearchPane').show();
 								<code>list</code>
 							</a>
 						</td>
-						<td>Equivalent of PHP's <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code></code> language construct:
+						<td> Equivalent of PHP's <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code></code> language construct:
+	Works with arrays and tuples. Specify <code class="prettyprint lang-d">null</code> as an argument to ignore that index
+	(equivalent of <code class="prettyprint lang-d"><code class="prettyprint lang-d">list</code>(x, , y)</code> in PHP).
 </td>
 					</tr>
 				</table>
 			</section>
 			<section>
-				<h2>Aliases</h2>
+				<h2>Structs</h2>
 				<table>
 					<col class="caption"/>
 					<tr>
 						<th>Name</th>
-						<th>Type</th>
 						<th>Description</th>
 					</tr>
 					<tr>
 						<td>
-							<a id="RangeTuple" class="public" href="../raijin/typeutils/RangeTuple.html">
-								<code>RangeTuple</code>
+							<a id="DynamicType" class="public" href="../raijin/typeutils/DynamicType.html">
+								<code>DynamicType</code>
 							</a>
 						</td>
-						<td>
-<code class="prettyprint lang-d">RangeTupleImpl!(N,ValueTuple!())</code>
-						</td>
-						<td>Generate a tuple containing integers from 0 to N-1.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="ValueTuple" class="public" href="../raijin/typeutils/ValueTuple.html">
-								<code>ValueTuple</code>
-							</a>
-						</td>
-						<td>
-<code class="prettyprint lang-d">T</code>
-						</td>
-						<td> Same as TypeTuple, but meant to be used with values.
+						<td>	simple type that can store strings, integers, booleans and decimals only.
 </td>
 					</tr>
 				</table>

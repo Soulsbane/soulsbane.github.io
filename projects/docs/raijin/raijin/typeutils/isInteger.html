@@ -66,7 +66,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function isInteger</h1>
 			<section>
-				<p>   Determines if a string is an integer <a href="../../raijin/typeutils/isInteger.html#value"><code class="prettyprint lang-d">value</code></a>.
+				<p>	Determines if a string is an integer <a href="../../raijin/typeutils/isInteger.html#value"><code class="prettyprint lang-d">value</code></a>.
 </p>
 <section>
 </section>
@@ -85,7 +85,7 @@ bool isInteger(
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>       true if the <a href="../../raijin/typeutils/isInteger.html#value"><code class="prettyprint lang-d">value</code></a> is a integer false otherwise.
+<p>		true if the <a href="../../raijin/typeutils/isInteger.html#value"><code class="prettyprint lang-d">value</code></a> is a integer false otherwise.
 </p>
 </section>
 <section><h3>Example</h3>
@@ -96,14 +96,14 @@ assert("zzzz".isInteger == false);
 }
 
 /**
-* Same as TypeTuple, but meant to be used with values.
-*
-*	Example:
-*		foreach (char channel; <a href="../../raijin/typeutils/ValueTuple.html">ValueTuple</a>!('r', 'g', 'b'))
-*		{
-*			the loop is unrolled at compile-time
-*			"channel" is a compile-time <a href="../../raijin/typeutils/isInteger.html#value">value</a>, and can be used in string mixins
-*		
+ Same as TypeTuple, but meant to be used with values.
+
+Example:
+	foreach (char channel; ValueTuple!('r', 'g', 'b'))
+	{
+		the loop is unrolled at compile-time
+		"channel" is a compile-time <a href="../../raijin/typeutils/isInteger.html#value">value</a>, and can be used in string mixins
+	
 </pre>
 </section>
 
