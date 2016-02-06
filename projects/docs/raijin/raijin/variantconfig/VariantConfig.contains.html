@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>VariantConfig.contains - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/configpath.html" class=" module">configpath</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/variantconfig.html" class="selected module">variantconfig</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>VariantConfig.contains - multiple declarations</h1>
+			<ul>
+				<li>Function VariantConfig.contains</li>
+				<li>Function VariantConfig.contains</li>
+			</ul>
+			<section>
+				<h2>Function VariantConfig.contains</h2>
+				<p>		Determines if the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+		The <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> name.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+bool contains(
+&nbsp;&nbsp;const(string) key
+) @trusted;</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="key">key</td><td> Name of the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> to <a href="../../raijin/variantconfig/VariantConfig.get.html"><code class="prettyprint lang-d">get</code></a> the value of
+</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>			true if the config file <code class="prettyprint lang-d">contains</code> the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> false otherwise.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function VariantConfig.contains</h2>
+				<p>		Determines if the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+bool contains(
+&nbsp;&nbsp;const(string) group,
+&nbsp;&nbsp;const(string) key
+) @trusted;</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="group">group</td><td> Name of the <a href="../../raijin/variantconfig/VariantConfig.contains.html#group"><code class="prettyprint lang-d">group</code></a> to <a href="../../raijin/variantconfig/VariantConfig.get.html"><code class="prettyprint lang-d">get</code></a> entries from.</td></tr>
+<tr><td id="key">key</td><td> Name of the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> to <a href="../../raijin/variantconfig/VariantConfig.get.html"><code class="prettyprint lang-d">get</code></a> the value from.
+</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>			true if the config file <a href="../../raijin/variantconfig/VariantConfig.contains.html"><code class="prettyprint lang-d">contains</code></a> the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> false otherwise.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

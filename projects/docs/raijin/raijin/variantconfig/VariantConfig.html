@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct VariantConfig</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/configpath.html" class=" module">configpath</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/variantconfig.html" class="selected module">variantconfig</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct VariantConfig</h1>
+			<section>
+				<p>	Handles the processing of config files.
+</p>
+
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.coerce.html" class="public">
+										<code>coerce</code>
+									</a>
+								</td>
+								<td>		Converts the value of <a href="../../raijin/variantconfig/VariantConfig.coerce.html#key"><code class="prettyprint lang-d">key</code></a> to type of T. Works the same as std.variant's <code class="prettyprint lang-d">coerce</code>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.contains.html" class="public">
+										<code>contains</code>
+									</a>
+								</td>
+								<td>		Determines if the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+		The <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> name.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.contains.html" class="public">
+										<code>contains</code>
+									</a>
+								</td>
+								<td>		Determines if the <a href="../../raijin/variantconfig/VariantConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.containsGroup.html" class="public">
+										<code>containsGroup</code>
+									</a>
+								</td>
+								<td>		Determines if the given <a href="../../raijin/variantconfig/VariantConfig.containsGroup.html#group"><code class="prettyprint lang-d">group</code></a> exists.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.get.html" class="public">
+										<code>get</code>
+									</a>
+								</td>
+								<td>		Retrieves the value T associated with <a href="../../raijin/variantconfig/VariantConfig.get.html#key"><code class="prettyprint lang-d">key</code></a> where T is the designated type to be converted to.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.get.html" class="public">
+										<code>get</code>
+									</a>
+								</td>
+								<td>		Retrieves the value T associated with <a href="../../raijin/variantconfig/VariantConfig.get.html#key"><code class="prettyprint lang-d">key</code></a> where T is the designated type to be converted to.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.get.html" class="public">
+										<code>get</code>
+									</a>
+								</td>
+								<td>		Retrieves the value T associated with <a href="../../raijin/variantconfig/VariantConfig.get.html#key"><code class="prettyprint lang-d">key</code></a> where T is the designated type to be converted to.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getGroup.html" class="public">
+										<code>getGroup</code>
+									</a>
+								</td>
+								<td>		Retrieves key/values associated with the <a href="../../raijin/variantconfig/VariantConfig.getGroup.html#group"><code class="prettyprint lang-d">group</code></a> portion of a config file/string.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getGroups.html" class="public">
+										<code>getGroups</code>
+									</a>
+								</td>
+								<td>		Retrieves an array containing key/values of all groups in the configfile omitting groupless key/values.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getGroupValue.html" class="public">
+										<code>getGroupValue</code>
+									</a>
+								</td>
+								<td>		Gets the value associated with the <a href="../../raijin/variantconfig/VariantConfig.getGroupValue.html#group"><code class="prettyprint lang-d">group</code></a> and <a href="../../raijin/variantconfig/VariantConfig.getGroupValue.html#key"><code class="prettyprint lang-d">key</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.loadFile.html" class="public">
+										<code>loadFile</code>
+									</a>
+								</td>
+								<td>		Loads a config <a href="../../raijin/variantconfig/VariantConfig.loadFile.html#fileName"><code class="prettyprint lang-d">fileName</code></a>(app.config by default) to be processed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.loadString.html" class="public">
+										<code>loadString</code>
+									</a>
+								</td>
+								<td>		Similar to <a href="../../raijin/variantconfig/VariantConfig.loadFile.html"><code class="prettyprint lang-d">loadFile</code></a> but loads and processes the passed string instead.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.opIndex.html" class="public">
+										<code>opIndex</code>
+									</a>
+								</td>
+								<td>		Allows config values to be accessed as you would with an associative array.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.opIndexAssign.html" class="public">
+										<code>opIndexAssign</code>
+									</a>
+								</td>
+								<td>		Allows config values to be assigned as you would with an associative array.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.remove.html" class="public">
+										<code>remove</code>
+									</a>
+								</td>
+								<td>		Removes a <a href="../../raijin/variantconfig/VariantConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
+		The <a href="../../raijin/variantconfig/VariantConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the keyName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.remove.html" class="public">
+										<code>remove</code>
+									</a>
+								</td>
+								<td>		Removes a <a href="../../raijin/variantconfig/VariantConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
+		The <a href="../../raijin/variantconfig/VariantConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of group.keyor just the <a href="../../raijin/variantconfig/VariantConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.removeGroup.html" class="public">
+										<code>removeGroup</code>
+									</a>
+								</td>
+								<td>		Removes a <a href="../../raijin/variantconfig/VariantConfig.removeGroup.html#group"><code class="prettyprint lang-d">group</code></a> from the config file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.save.html" class="public">
+										<code>save</code>
+									</a>
+								</td>
+								<td>		Saves config values to the config file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.set.html" class="public">
+										<code>set</code>
+									</a>
+								</td>
+								<td>		Sets a config <a href="../../raijin/variantconfig/VariantConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.set.html" class="public">
+										<code>set</code>
+									</a>
+								</td>
+								<td>		Sets a config <a href="../../raijin/variantconfig/VariantConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getBool.html" class="public">
+										<code>getBool</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a bool.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getByte.html" class="public">
+										<code>getByte</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a byte.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getDouble.html" class="public">
+										<code>getDouble</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a double.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getFloat.html" class="public">
+										<code>getFloat</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a float.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getInt.html" class="public">
+										<code>getInt</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a int.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getLong.html" class="public">
+										<code>getLong</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a long.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getReal.html" class="public">
+										<code>getReal</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a real.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getShort.html" class="public">
+										<code>getShort</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a short.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/variantconfig/VariantConfig.getString.html" class="public">
+										<code>getString</code>
+									</a>
+								</td>
+								<td>Gets the value and converts it to a string.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">string text = "
+	aBool=true
+	decimal = 3443.443
+	number=12071
+	#Here is a comment
+	sentence=This is a really long sentence to test for a really long value string!
+	time=12:04
+	[section]
+	groupSection=is really cool if this works!
+	japan=true
+	babymetal=the one
+	[another]
+	#And another comment!
+	world=hello
+	japan=false
+";
+
+VariantConfig config;
+
+immutable bool loaded = config.loadString(text);
+assert(loaded, "Failed to load string!");
+
+assert(config.containsGroup("section"));
+config.removeGroup("section");
+assert(config.containsGroup("section") == false);
+
+assert(config.get("aBool").coerce!bool == true);
+assert(config.getBool("aBool")); // Syntactic sugar
+assert(config["aBool"].coerce!bool == true); // Also works but rather awkward
+assert(config.coerce!bool("aBool") == true); // Also works and more natural
+
+assert(config.contains("time"));
+
+auto number = config["number"];
+
+assert(number == 12071);
+assert(config["decimal"] == 3443.443);
+
+assert(config.contains("another.world"));
+assert(config["another.world"] == "hello");
+config.remove("another.world");
+assert(config.contains("another.world") == false);
+assert(config.contains("anothers", "world") == false);
+
+assert(config.contains("number"));
+config.remove("number");
+assert(config.contains("number") == false);
+
+assert(config["another.japan"] == false);
+
+writeln("VariantConfig: Testing <a href="../../raijin/variantconfig/VariantConfig.getGroup.html">getGroup</a>...");
+
+auto group = config.getGroup("another");
+
+foreach(value; group)
+{
+	writeln(value);
+}
+
+writeln();
+
+config.set("aBool", false);
+assert(config["aBool"].coerce!bool == false);
+config["aBool"] = true;
+assert(config["aBool"].coerce!bool == true);
+assert(config["aBool"].toString == "true");
+
+debug config.save();
+debug config.save("custom-config-format.dat");
+
+string noEqualSign = "
+	equal=sign
+	time=12:04
+	This is a really long sentence to test for a really long value string!
+";
+
+bool equalSignValue = config.loadString(noEqualSign);
+assert(equalSignValue == false);
+
+string invalidGroup = "
+	[first]
+	equal=sign
+	time=12:04
+	[second
+	another=key value is here
+";
+
+bool invalidGroupValue = config.loadString(invalidGroup);
+assert(invalidGroupValue == false);
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

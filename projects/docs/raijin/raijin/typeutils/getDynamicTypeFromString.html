@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function getDynamicTypeFromString</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/configpath.html" class=" module">configpath</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class="selected module">typeutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function getDynamicTypeFromString</h1>
+			<section>
+				<p>	Converts a string to its appropriate type to be stored in a <a href="../../raijin/typeutils/DynamicType.html"><code class="prettyprint lang-d">DynamicType</code></a>.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+<a href="../../raijin/typeutils/DynamicType.html">DynamicType</a> getDynamicTypeFromString(
+&nbsp;&nbsp;const(string) value
+);</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="value">value</td><td> The string to convert.
+</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>		The converted string as a <a href="../../raijin/typeutils/DynamicType.html"><code class="prettyprint lang-d">DynamicType</code></a>.
+</p>
+</section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">const string strInt = "90210";
+<a href="../../raijin/typeutils/DynamicType.html">DynamicType</a> dynInt = getDynamicTypeFromString(strInt);
+assert(dynInt == 90210);
+
+const string strDec = "90.210";
+<a href="../../raijin/typeutils/DynamicType.html">DynamicType</a> dynDec = getDynamicTypeFromString(strDec);
+assert(dynDec == 90.210);
+
+const string strBool = "true";
+<a href="../../raijin/typeutils/DynamicType.html">DynamicType</a> dynBool = getDynamicTypeFromString(strBool);
+assert(dynBool == true);
+
+const string str = "My zip code is 90210";
+<a href="../../raijin/typeutils/DynamicType.html">DynamicType</a> dynStr = getDynamicTypeFromString(str);
+assert(dynStr == str);
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>
