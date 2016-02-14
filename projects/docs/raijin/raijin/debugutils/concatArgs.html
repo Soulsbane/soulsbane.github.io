@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function concatArgs</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
+							</li>
+							<li>
+								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/configpath.html" class=" module">configpath</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class="selected module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function concatArgs</h1>
+			<section>
+				<p>	A debug function for outputing each argument with a space in between. Useful for printing multiple variables.
+</p>
+<section>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<pre class="code prettyprint lang-d prototype">
+string concatArgs(T...)(
+&nbsp;&nbsp;T args
+);</pre>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="args">args</td><td> The arguments(variables) that should be printed.</td></tr>
+</table>
+</section>
+<section><h3>Example</h3>
+
+<pre class="code prettyprint lang-d">assert(concatArgs(1, 2, 3, 4) == "1 2 3 4");
+assert(concatArgs(true, "blah", 54) == "true blah 54");
+</pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

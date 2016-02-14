@@ -22,6 +22,9 @@
 								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
 							</li>
 							<li>
@@ -34,6 +37,9 @@
 								<a href="../../raijin/fileutils.html" class="selected module">fileutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
 								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
@@ -41,9 +47,6 @@
 							</li>
 							<li>
 								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
 							</li>
 						</ul>
 							</li>
@@ -76,13 +79,13 @@ $('#symbolSearchPane').show();
 						<pre class="code prettyprint lang-d prototype">
 std.<wbr/>stdio.<wbr/>File ensureFileExists(
 &nbsp;&nbsp;const(string) fileName,
-&nbsp;&nbsp;std.<wbr/>typecons.<wbr/>Flag!("appendMode") mode = cast(Flag)false
+&nbsp;&nbsp;const(string) mode = "w+"
 );</pre>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="fileName">fileName</td><td> Name of the file to create or open.</td></tr>
-<tr><td id="mode">mode</td><td> Set to AppendMode.yes if the file should be opened in append <a href="../../raijin/fileutils/ensureFileExists.html#mode"><code class="prettyprint lang-d">mode</code></a>.
+<tr><td id="mode">mode</td><td> The <a href="../../raijin/fileutils/ensureFileExists.html#mode"><code class="prettyprint lang-d">mode</code></a> to open the file in. Same as std.stdio.File. Opened in w+ by default.
 </td></tr>
 </table>
 </section>

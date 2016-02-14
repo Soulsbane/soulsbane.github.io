@@ -22,6 +22,9 @@
 								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class="selected module">commandlineargs</a>
 							</li>
 							<li>
@@ -34,6 +37,9 @@
 								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
 								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
@@ -41,9 +47,6 @@
 							</li>
 							<li>
 								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
 							</li>
 						</ul>
 							</li>
@@ -75,7 +78,7 @@ $('#symbolSearchPane').show();
 					<section>
 						<h3>Prototype</h3>
 						<pre class="code prettyprint lang-d prototype">
-final std.<wbr/>variant.<wbr/>VariantN!(32L) opIndex(
+final <a href="../../raijin/typeutils/DynamicType.html">DynamicType</a> opIndex(
 &nbsp;&nbsp;const(string) key
 ) @trusted;</pre>
 					</section>
@@ -87,9 +90,8 @@ final std.<wbr/>variant.<wbr/>VariantN!(32L) opIndex(
 </section>
 <section><h3>Returns</h3>
 <p>			The value of value of the command line argument to get. If the <a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><code class="prettyprint lang-d">key</code></a> isn't found it will
-			return an unitialized Variant. Method hasValue can be used to test if the returned value is valid.
+			return an <a href="../../raijin/typeutils/DynamicType.html"><code class="prettyprint lang-d">raijin.typeutils.DynamicType</code></a>.
 </p>
-
 </section>
 
 			</section>

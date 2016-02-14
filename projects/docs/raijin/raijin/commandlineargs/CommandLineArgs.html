@@ -22,6 +22,9 @@
 								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class="selected module">commandlineargs</a>
 							</li>
 							<li>
@@ -34,6 +37,9 @@
 								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
 							</li>
 							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
 								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
 							</li>
 							<li>
@@ -41,9 +47,6 @@
 							</li>
 							<li>
 								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/variantconfig.html" class=" module">variantconfig</a>
 							</li>
 						</ul>
 							</li>
@@ -88,29 +91,11 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.addCommand.html" class="public">
-										<code>addCommand</code>
-									</a>
-								</td>
-								<td>		Registers a command line argument used in year=1942
-</td>
-							</tr>
-							<tr>
-								<td>
 									<a href="../../raijin/commandlineargs/CommandLineArgs.addFlag.html" class="public">
 										<code>addFlag</code>
 									</a>
 								</td>
 								<td>		Registers a flag argument eg. --flag
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.coerce.html" class="public">
-										<code>coerce</code>
-									</a>
-								</td>
-								<td>		Converts the value of <a href="../../raijin/commandlineargs/CommandLineArgs.coerce.html#key"><code class="prettyprint lang-d">key</code></a> to type of T. Works the same as std.variant's <code class="prettyprint lang-d">coerce</code>.
 </td>
 							</tr>
 							<tr>
@@ -146,7 +131,7 @@ $('#symbolSearchPane').show();
 										<code>onNoArgs</code>
 									</a>
 								</td>
-								<td>		Called when an valid argument is passed on the command line.
+								<td>		Called when no arguments were passed on the command line.
 </td>
 							</tr>
 							<tr>
@@ -182,7 +167,7 @@ $('#symbolSearchPane').show();
 										<code>onValidArgs</code>
 									</a>
 								</td>
-								<td>		Called when an valid argument is passed on the command line.
+								<td>		Called after all arguments have been processed and no invalid arguments were found.
 </td>
 							</tr>
 							<tr>
@@ -201,7 +186,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>		Assigns a value to a commandline argument stored internally but uses ArgValues as the value.
+								<td>		Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
 </td>
 							</tr>
 							<tr>
@@ -210,7 +195,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>		Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
+								<td>		Assigns a value to a commandline argument stored internally but uses ArgValues as the value.
 </td>
 							</tr>
 							<tr>
@@ -219,9 +204,7 @@ $('#symbolSearchPane').show();
 										<code>process</code>
 									</a>
 								</td>
-								<td>		Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> passed to the program. This is the internal command line
-		argument processing method. The method processArgs should be used as it simplifies handling of command line
-		<a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a>.
+								<td>		Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> passed to the program.
 </td>
 							</tr>
 							<tr>
@@ -244,121 +227,28 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
-					<section>
-						<h3>Aliases</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getBool.html" class="public">
-										<code>getBool</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a bool.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getByte.html" class="public">
-										<code>getByte</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a byte.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getDouble.html" class="public">
-										<code>getDouble</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a double.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getFloat.html" class="public">
-										<code>getFloat</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a float.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getInt.html" class="public">
-										<code>getInt</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a int.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getLong.html" class="public">
-										<code>getLong</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a long.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getReal.html" class="public">
-										<code>getReal</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a real.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getShort.html" class="public">
-										<code>getShort</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a short.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/commandlineargs/CommandLineArgs.getString.html" class="public">
-										<code>getString</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a string.
-</td>
-							</tr>
-						</table>
-					</section>
 <section><h3>Example</h3>
 
 <pre class="code prettyprint lang-d">auto arguments = ["testapp", "-flag", "-value=this is a test", "-aFloat=4.44"];
 auto args = new CommandLineArgs;
 
 args.addFlag("flag", "A test flag");
-args.addCommand!float("aFloat", 3.14, "A float value");
-args.addCommand!int("integer", 100, "Sets value");
-args.addCommand!string("value", "hello world", "Just a silly value.");
+args.addCommand("aFloat", 3.14, "A float value");
+args.addCommand("integer", 100, "Sets value");
+args.addCommand("value", "hello world", "Just a silly value.");
 args.process(arguments);
 
-assert(args.getBool("flag") == true);
+assert(args.asBoolean("flag") == true);
 assert(args["flag"] == true);
-assert(args.coerce!bool("flag") == true);
 
 import std.math;
 
-float aFloat = args.getFloat("aFloat");
+float aFloat = args.asDecimal("aFloat");
 
-assert(feqrel(args.getFloat("aFloat"), 4.44));
+assert(feqrel(args.asDecimal("aFloat"), 4.44));
 assert(feqrel(aFloat, 4.44));
 
-assert(feqrel(args.getDouble("aFloat"), 4.44));
-assert(feqrel(args.coerce!double("aFloat"), 4.44));
+assert(feqrel(args.asInteger("aFloat"), 4.44));
 
 assert(args.contains("integer") == true);
 assert(args.contains("valuez") == false);

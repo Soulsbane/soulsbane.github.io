@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class CommandProcessor</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="prettyPrint(); setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/cmdline.html" class="selected module">cmdline</a>
+							</li>
+							<li>
+								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../raijin/configpath.html" class=" module">configpath</a>
+							</li>
+							<li>
+								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class CommandProcessor</h1>
+			<section>
+				<p>	Manages a loop which processes commands via command line input.
+</p>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.addCommand.html" class="public">
+										<code>addCommand</code>
+									</a>
+								</td>
+								<td>		Adds a <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><code class="prettyprint lang-d">command</code></a> that should be processed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.isValidCommand.html" class="public">
+										<code>isValidCommand</code>
+									</a>
+								</td>
+								<td>		Determines if a <a href="../../raijin/cmdline/CommandProcessor.isValidCommand.html#command"><code class="prettyprint lang-d">command</code></a> is valid(added via <a href="../../raijin/cmdline/CommandProcessor.addCommand.html"><code class="prettyprint lang-d">addCommand</code></a>).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.onCommand.html" class="public">
+										<code>onCommand</code>
+									</a>
+								</td>
+								<td>		Recieves commands sent from <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.onEnterProcessCommands.html" class="public">
+										<code>onEnterProcessCommands</code>
+									</a>
+								</td>
+								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> after commands are handled.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.onExitProcessCommands.html" class="public">
+										<code>onExitProcessCommands</code>
+									</a>
+								</td>
+								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> before commands are handled.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.onListCommands.html" class="public">
+										<code>onListCommands</code>
+									</a>
+								</td>
+								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> when the "list" command is sent.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.processCommands.html" class="public">
+										<code>processCommands</code>
+									</a>
+								</td>
+								<td>		Processes commands sent via the command line.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.quit.html" class="public">
+										<code>quit</code>
+									</a>
+								</td>
+								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> when the "exit" command is sent.
+</td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>

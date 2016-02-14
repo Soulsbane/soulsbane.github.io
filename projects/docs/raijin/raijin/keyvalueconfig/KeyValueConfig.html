@@ -19,6 +19,12 @@
 								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
+								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+							</li>
+							<li>
+								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
+							</li>
+							<li>
 								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
 							</li>
 							<li>
@@ -76,11 +82,12 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.coerce.html" class="public">
-										<code>coerce</code>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html" class="public">
+										<code>contains</code>
 									</a>
 								</td>
-								<td>	Converts the value of <a href="../../raijin/keyvalueconfig/KeyValueConfig.coerce.html#key"><code class="prettyprint lang-d">key</code></a> to type of T. Works the same as std.variant's <code class="prettyprint lang-d">coerce</code>.
+								<td>		Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> name.
 </td>
 							</tr>
 							<tr>
@@ -89,17 +96,7 @@ $('#symbolSearchPane').show();
 										<code>contains</code>
 									</a>
 								</td>
-								<td>	Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
-	The <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> name.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html" class="public">
-										<code>contains</code>
-									</a>
-								</td>
-								<td>	Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+								<td>		Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
 </td>
 							</tr>
 							<tr>
@@ -108,34 +105,7 @@ $('#symbolSearchPane').show();
 										<code>containsGroup</code>
 									</a>
 								</td>
-								<td>	Determines if the given <a href="../../raijin/keyvalueconfig/KeyValueConfig.containsGroup.html#group"><code class="prettyprint lang-d">group</code></a> exists.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html" class="public">
-										<code>get</code>
-									</a>
-								</td>
-								<td>	Retrieves the value T associated with <a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html#key"><code class="prettyprint lang-d">key</code></a> where T is the designated type to be converted to.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html" class="public">
-										<code>get</code>
-									</a>
-								</td>
-								<td>	Retrieves the value T associated with <a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html#key"><code class="prettyprint lang-d">key</code></a> where T is the designated type to be converted to.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html" class="public">
-										<code>get</code>
-									</a>
-								</td>
-								<td>	Retrieves the value T associated with <a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html#key"><code class="prettyprint lang-d">key</code></a> where T is the designated type to be converted to.
+								<td>		Determines if the given <a href="../../raijin/keyvalueconfig/KeyValueConfig.containsGroup.html#group"><code class="prettyprint lang-d">group</code></a> exists.
 </td>
 							</tr>
 							<tr>
@@ -144,7 +114,7 @@ $('#symbolSearchPane').show();
 										<code>getGroup</code>
 									</a>
 								</td>
-								<td>	Retrieves key/values associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html#group"><code class="prettyprint lang-d">group</code></a> portion of a config file/string.
+								<td>		Retrieves key/values associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html#group"><code class="prettyprint lang-d">group</code></a> portion of a config file/string.
 </td>
 							</tr>
 							<tr>
@@ -153,7 +123,7 @@ $('#symbolSearchPane').show();
 										<code>getGroups</code>
 									</a>
 								</td>
-								<td>	Retrieves an array containing key/values of all groups in the configfile omitting groupless key/values.
+								<td>		Retrieves an array containing key/values of all groups in the configfile omitting groupless key/values.
 </td>
 							</tr>
 							<tr>
@@ -162,7 +132,7 @@ $('#symbolSearchPane').show();
 										<code>getGroupValue</code>
 									</a>
 								</td>
-								<td>	Gets the value associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#group"><code class="prettyprint lang-d">group</code></a> and <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#key"><code class="prettyprint lang-d">key</code></a>.
+								<td>		Gets the value associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#group"><code class="prettyprint lang-d">group</code></a> and <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#key"><code class="prettyprint lang-d">key</code></a>.
 </td>
 							</tr>
 							<tr>
@@ -171,7 +141,7 @@ $('#symbolSearchPane').show();
 										<code>loadFile</code>
 									</a>
 								</td>
-								<td>	Loads a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html#fileName"><code class="prettyprint lang-d">fileName</code></a>(app.config by default) to be processed.
+								<td>		Loads a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html#fileName"><code class="prettyprint lang-d">fileName</code></a>(app.config by default) to be processed.
 </td>
 							</tr>
 							<tr>
@@ -180,7 +150,7 @@ $('#symbolSearchPane').show();
 										<code>loadString</code>
 									</a>
 								</td>
-								<td>	Similar to <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html"><code class="prettyprint lang-d">loadFile</code></a> but loads and processes the passed string instead.
+								<td>		Similar to <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html"><code class="prettyprint lang-d">loadFile</code></a> but loads and processes the passed string instead.
 </td>
 							</tr>
 							<tr>
@@ -189,7 +159,7 @@ $('#symbolSearchPane').show();
 										<code>opIndex</code>
 									</a>
 								</td>
-								<td>	Allows config values to be accessed as you would with an associative array.
+								<td>		Allows config values to be accessed as you would with an associative array.
 </td>
 							</tr>
 							<tr>
@@ -198,7 +168,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>	Allows config values to be assigned as you would with an associative array.
+								<td>		Allows config values to be assigned as you would with an associative array.
 </td>
 							</tr>
 							<tr>
@@ -207,8 +177,8 @@ $('#symbolSearchPane').show();
 										<code>remove</code>
 									</a>
 								</td>
-								<td>	Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
-	The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the keyName.
+								<td>		Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
+		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the keyName.
 </td>
 							</tr>
 							<tr>
@@ -217,8 +187,8 @@ $('#symbolSearchPane').show();
 										<code>remove</code>
 									</a>
 								</td>
-								<td>	Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
-	The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of group.keyor just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>.
+								<td>		Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
+		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of group.keyor just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>.
 </td>
 							</tr>
 							<tr>
@@ -227,7 +197,7 @@ $('#symbolSearchPane').show();
 										<code>removeGroup</code>
 									</a>
 								</td>
-								<td>	Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.removeGroup.html#group"><code class="prettyprint lang-d">group</code></a> from the config file.
+								<td>		Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.removeGroup.html#group"><code class="prettyprint lang-d">group</code></a> from the config file.
 </td>
 							</tr>
 							<tr>
@@ -236,7 +206,7 @@ $('#symbolSearchPane').show();
 										<code>save</code>
 									</a>
 								</td>
-								<td>	Saves config values to the config file.
+								<td>		Saves config values to the config file.
 </td>
 							</tr>
 							<tr>
@@ -245,7 +215,7 @@ $('#symbolSearchPane').show();
 										<code>set</code>
 									</a>
 								</td>
-								<td>	Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
+								<td>		Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
 </td>
 							</tr>
 							<tr>
@@ -254,98 +224,7 @@ $('#symbolSearchPane').show();
 										<code>set</code>
 									</a>
 								</td>
-								<td>	Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Aliases</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getBool.html" class="public">
-										<code>getBool</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a bool.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getByte.html" class="public">
-										<code>getByte</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a byte.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getDouble.html" class="public">
-										<code>getDouble</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a double.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getFloat.html" class="public">
-										<code>getFloat</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a float.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getInt.html" class="public">
-										<code>getInt</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a int.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getLong.html" class="public">
-										<code>getLong</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a long.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getReal.html" class="public">
-										<code>getReal</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a real.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getShort.html" class="public">
-										<code>getShort</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a short.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getString.html" class="public">
-										<code>getString</code>
-									</a>
-								</td>
-								<td>Gets the value and converts it to a string.
+								<td>		Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
 </td>
 							</tr>
 						</table>
@@ -378,11 +257,7 @@ assert(config.containsGroup("section"));
 config.removeGroup("section");
 assert(config.containsGroup("section") == false);
 
-assert(config.get("aBool").coerce!bool == true);
-assert(config.getBool("aBool")); // Syntactic sugar
-assert(config["aBool"].coerce!bool == true); // Also works but rather awkward
-assert(config.coerce!bool("aBool") == true); // Also works and more natural
-
+assert(config.asBoolean("aBool"));
 assert(config.contains("time"));
 
 auto number = config["number"];
@@ -402,7 +277,7 @@ assert(config.contains("number") == false);
 
 assert(config["another.japan"] == false);
 
-writeln("KeyValueConfig: Testing <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html">getGroup</a>...");
+writeln("Testing <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html">getGroup</a>...");
 
 auto group = config.getGroup("another");
 
@@ -414,13 +289,31 @@ foreach(value; group)
 writeln();
 
 config.set("aBool", false);
-assert(config["aBool"].coerce!bool == false);
 config["aBool"] = true;
-assert(config["aBool"].coerce!bool == true);
-assert(config["aBool"].toString == "true");
+assert(config["aBool"].asString == "true");
 
 debug config.save();
 debug config.save("custom-config-format.dat");
+
+string noEqualSign = "
+	equal=sign
+	time=12:04
+	This is a really long sentence to test for a really long value string!
+";
+
+bool equalSignValue = config.loadString(noEqualSign);
+assert(equalSignValue == false);
+
+string invalidGroup = "
+	[first]
+	equal=sign
+	time=12:04
+	[second
+	another=key value is here
+";
+
+bool invalidGroupValue = config.loadString(invalidGroup);
+assert(invalidGroupValue == false);
 </pre>
 </section>
 
