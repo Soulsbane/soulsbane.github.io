@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class="selected module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,14 +76,15 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class CommandProcessor</h1>
 			<section>
-				<p>	Manages a loop which processes commands via command line input.
+				<p>Manages a loop which processes commands via command line input.
 </p>
+<section></section>
 
 					<section>
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -95,7 +103,7 @@ $('#symbolSearchPane').show();
 										<code>addCommand</code>
 									</a>
 								</td>
-								<td>		Adds a <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><code class="prettyprint lang-d">command</code></a> that should be processed.
+								<td>Adds a <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><code class="lang-d"><span class="pln">command</span></code></a> that should be processed.
 </td>
 							</tr>
 							<tr>
@@ -104,7 +112,7 @@ $('#symbolSearchPane').show();
 										<code>isValidCommand</code>
 									</a>
 								</td>
-								<td>		Determines if a <a href="../../raijin/cmdline/CommandProcessor.isValidCommand.html#command"><code class="prettyprint lang-d">command</code></a> is valid(added via <a href="../../raijin/cmdline/CommandProcessor.addCommand.html"><code class="prettyprint lang-d">addCommand</code></a>).
+								<td>Determines if a <a href="../../raijin/cmdline/CommandProcessor.isValidCommand.html#command"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.isValidCommand.html#command"><span class="pln">command</span></a></span></code></a> is valid(added via <a href="../../raijin/cmdline/CommandProcessor.addCommand.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.addCommand.html"><span class="pln">addCommand</span></a></span></code></a>).
 </td>
 							</tr>
 							<tr>
@@ -113,7 +121,7 @@ $('#symbolSearchPane').show();
 										<code>onCommand</code>
 									</a>
 								</td>
-								<td>		Recieves commands sent from <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a>
+								<td>Recieves commands sent from <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><span class="pln">processCommands</span></a></span></code></a>
 </td>
 							</tr>
 							<tr>
@@ -122,7 +130,7 @@ $('#symbolSearchPane').show();
 										<code>onEnterProcessCommands</code>
 									</a>
 								</td>
-								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> after commands are handled.
+								<td>Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><span class="pln">processCommands</span></a></span></code></a> after commands are handled.
 </td>
 							</tr>
 							<tr>
@@ -131,7 +139,7 @@ $('#symbolSearchPane').show();
 										<code>onExitProcessCommands</code>
 									</a>
 								</td>
-								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> before commands are handled.
+								<td>Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln">processCommands</span></code></a> before commands are handled.
 </td>
 							</tr>
 							<tr>
@@ -140,7 +148,7 @@ $('#symbolSearchPane').show();
 										<code>onListCommands</code>
 									</a>
 								</td>
-								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> when the "list" command is sent.
+								<td>Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><span class="pln">processCommands</span></a></span></code></a> when the "list" command is sent.
 </td>
 							</tr>
 							<tr>
@@ -149,7 +157,7 @@ $('#symbolSearchPane').show();
 										<code>processCommands</code>
 									</a>
 								</td>
-								<td>		Processes commands sent via the command line.
+								<td>Processes commands sent via the command line.
 </td>
 							</tr>
 							<tr>
@@ -158,11 +166,28 @@ $('#symbolSearchPane').show();
 										<code>quit</code>
 									</a>
 								</td>
-								<td>		Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="prettyprint lang-d">processCommands</code></a> when the "exit" command is sent.
+								<td>Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln">processCommands</span></code></a> when the "exit" command is sent.
 </td>
 							</tr>
 						</table>
 					</section>
+<section><h3>Examples</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">class </span><span class="typ">MyCommand </span><span class="pun">: </span><span class="typ">CommandProcessor
+</span><span class="pun">{
+	</span><span class="com">// All on&lt;name&gt; commands can be overriden.
+	</span><span class="kwd">override </span><span class="typ">void <a href="../../raijin/cmdline/CommandProcessor.onCommand.html"></span><span class="pln">onCommand</a></span><span class="pun">(</span><span class="kwd">const </span><span class="typ">string </span><span class="pln">command</span><span class="pun">)
+	{
+
+		</span><span class="com">// Will only print "test" since it is the only command registered.
+		</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"inherited onCommand: "</span><span class="pun">, </span><span class="pln">command</span><span class="pun">);
+	}
+}
+
+</span><span class="kwd">auto </span><span class="pln">cmd </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MyCommand</span><span class="pun">;
+
+</span><span class="pln">cmd<wbr/></span><span class="pun">.</span><span class="pln">addCommand</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"this is a test"</span><span class="pun">);
+</span><span class="pln">cmd<wbr/></span><span class="pun">.</span><span class="pln">processCommands</span><span class="pun">();</span></code></pre>
+</section>
 
 			</section>
 			<section>

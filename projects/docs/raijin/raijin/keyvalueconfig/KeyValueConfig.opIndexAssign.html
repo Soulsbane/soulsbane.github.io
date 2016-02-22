@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class="selected module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,23 +76,28 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function KeyValueConfig.opIndexAssign</h1>
 			<section>
-				<p>		Allows config values to be assigned as you would with an associative array.
+				<p>Allows config values to be assigned as you would with an associative array.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-void opIndexAssign(T)(
-&nbsp;&nbsp;T value,
-&nbsp;&nbsp;const string key
-) @trusted;</pre>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">opIndexAssign</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">value</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">string</span> <span class="pln">key</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="pun">@</span><span class="pln">trusted</span><span class="pun">;</span>
+							</code>
+						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="key">key</td><td> Name of the <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#key"><code class="prettyprint lang-d">key</code></a> to assign the <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to.</td></tr>
-<tr><td id="value">value</td><td> The <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> in which <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#key"><code class="prettyprint lang-d">key</code></a> should be assigned to.</td></tr>
+<tr><td id="key">key</td><td> Name of the <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#key"><code class="lang-d"><span class="pln">key</span></code></a> to assign the <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#value"><code class="lang-d"><span class="pln">value</span></code></a> to.</td></tr>
+<tr><td id="value">value</td><td> The <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#value"><code class="lang-d"><span class="pln">value</span></code></a> in which <a href="../../raijin/keyvalueconfig/KeyValueConfig.opIndexAssign.html#key"><code class="lang-d"><span class="pln">key</span></code></a> should be assigned to.</td></tr>
 </table>
 </section>
 

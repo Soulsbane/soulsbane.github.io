@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class="selected module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,7 +76,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Struct KeyValueConfig</h1>
 			<section>
-				<p>	Handles the processing of config files.
+				<p>Handles the processing of config files.
 </p>
 
 					<section>
@@ -86,8 +93,8 @@ $('#symbolSearchPane').show();
 										<code>contains</code>
 									</a>
 								</td>
-								<td>		Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
-		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> name.
+								<td>Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="lang-d"><span class="pln">key</span></code></a> is found in the config file.
+		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="lang-d"><span class="pln">key</span></code></a> can be either its name of in the format of groupName.keyName or just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="lang-d"><span class="pln">key</span></code></a> name.
 </td>
 							</tr>
 							<tr>
@@ -96,7 +103,7 @@ $('#symbolSearchPane').show();
 										<code>contains</code>
 									</a>
 								</td>
-								<td>		Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="prettyprint lang-d">key</code></a> is found in the config file.
+								<td>Determines if the <a href="../../raijin/keyvalueconfig/KeyValueConfig.contains.html#key"><code class="lang-d"><span class="pln">key</span></code></a> is found in the config file.
 </td>
 							</tr>
 							<tr>
@@ -105,7 +112,7 @@ $('#symbolSearchPane').show();
 										<code>containsGroup</code>
 									</a>
 								</td>
-								<td>		Determines if the given <a href="../../raijin/keyvalueconfig/KeyValueConfig.containsGroup.html#group"><code class="prettyprint lang-d">group</code></a> exists.
+								<td>Determines if the given <a href="../../raijin/keyvalueconfig/KeyValueConfig.containsGroup.html#group"><code class="lang-d"><span class="pln">group</span></code></a> exists.
 </td>
 							</tr>
 							<tr>
@@ -114,7 +121,7 @@ $('#symbolSearchPane').show();
 										<code>getGroup</code>
 									</a>
 								</td>
-								<td>		Retrieves key/values associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html#group"><code class="prettyprint lang-d">group</code></a> portion of a config file/string.
+								<td>Retrieves key/values associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html#group"><code class="lang-d"><span class="pln">group</span></code></a> portion of a config file/string.
 </td>
 							</tr>
 							<tr>
@@ -123,7 +130,7 @@ $('#symbolSearchPane').show();
 										<code>getGroups</code>
 									</a>
 								</td>
-								<td>		Retrieves an array containing key/values of all groups in the configfile omitting groupless key/values.
+								<td>Retrieves an array containing key/values of all groups in the configfile omitting groupless key/values.
 </td>
 							</tr>
 							<tr>
@@ -132,7 +139,7 @@ $('#symbolSearchPane').show();
 										<code>getGroupValue</code>
 									</a>
 								</td>
-								<td>		Gets the value associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#group"><code class="prettyprint lang-d">group</code></a> and <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#key"><code class="prettyprint lang-d">key</code></a>.
+								<td>Gets the value associated with the <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#group"><code class="lang-d"><span class="pln">group</span></code></a> and <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html#key"><code class="lang-d"><span class="pln">key</span></code></a>.
 </td>
 							</tr>
 							<tr>
@@ -141,7 +148,7 @@ $('#symbolSearchPane').show();
 										<code>loadFile</code>
 									</a>
 								</td>
-								<td>		Loads a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html#fileName"><code class="prettyprint lang-d">fileName</code></a>(app.config by default) to be processed.
+								<td>Loads a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html#fileName"><code class="lang-d"><span class="pln">fileName</span></code></a>(app.config by default) to be processed.
 </td>
 							</tr>
 							<tr>
@@ -150,7 +157,7 @@ $('#symbolSearchPane').show();
 										<code>loadString</code>
 									</a>
 								</td>
-								<td>		Similar to <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html"><code class="prettyprint lang-d">loadFile</code></a> but loads and processes the passed string instead.
+								<td>Similar to <a href="../../raijin/keyvalueconfig/KeyValueConfig.loadFile.html"><code class="lang-d"><span class="pln">loadFile</span></code></a> but loads and processes the passed string instead.
 </td>
 							</tr>
 							<tr>
@@ -159,7 +166,7 @@ $('#symbolSearchPane').show();
 										<code>opIndex</code>
 									</a>
 								</td>
-								<td>		Allows config values to be accessed as you would with an associative array.
+								<td>Allows config values to be accessed as you would with an associative array.
 </td>
 							</tr>
 							<tr>
@@ -168,7 +175,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>		Allows config values to be assigned as you would with an associative array.
+								<td>Allows config values to be assigned as you would with an associative array.
 </td>
 							</tr>
 							<tr>
@@ -177,8 +184,8 @@ $('#symbolSearchPane').show();
 										<code>remove</code>
 									</a>
 								</td>
-								<td>		Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
-		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of groupName.keyName or just the keyName.
+								<td>Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="lang-d"><span class="pln">key</span></code></a>/value from config file.
+		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="lang-d"><span class="pln">key</span></code></a> can be either its name of in the format of groupName.keyName or just the keyName.
 </td>
 							</tr>
 							<tr>
@@ -187,8 +194,8 @@ $('#symbolSearchPane').show();
 										<code>remove</code>
 									</a>
 								</td>
-								<td>		Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>/value from config file.
-		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a> can be either its name of in the format of group.keyor just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="prettyprint lang-d">key</code></a>.
+								<td>Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="lang-d"><span class="pln">key</span></code></a>/value from config file.
+		The <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="lang-d"><span class="pln">key</span></code></a> can be either its name of in the format of group.keyor just the <a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html#key"><code class="lang-d"><span class="pln">key</span></code></a>.
 </td>
 							</tr>
 							<tr>
@@ -197,7 +204,7 @@ $('#symbolSearchPane').show();
 										<code>removeGroup</code>
 									</a>
 								</td>
-								<td>		Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.removeGroup.html#group"><code class="prettyprint lang-d">group</code></a> from the config file.
+								<td>Removes a <a href="../../raijin/keyvalueconfig/KeyValueConfig.removeGroup.html#group"><code class="lang-d"><span class="pln">group</span></code></a> from the config file.
 </td>
 							</tr>
 							<tr>
@@ -206,7 +213,7 @@ $('#symbolSearchPane').show();
 										<code>save</code>
 									</a>
 								</td>
-								<td>		Saves config values to the config file.
+								<td>Saves config values to the config file.
 </td>
 							</tr>
 							<tr>
@@ -215,7 +222,7 @@ $('#symbolSearchPane').show();
 										<code>set</code>
 									</a>
 								</td>
-								<td>		Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
+								<td>Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="lang-d"><span class="pln">value</span></code></a>.
 </td>
 							</tr>
 							<tr>
@@ -224,14 +231,13 @@ $('#symbolSearchPane').show();
 										<code>set</code>
 									</a>
 								</td>
-								<td>		Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="prettyprint lang-d">value</code></a>.
+								<td>Sets a config <a href="../../raijin/keyvalueconfig/KeyValueConfig.set.html#value"><code class="lang-d"><span class="pln">value</span></code></a>.
 </td>
 							</tr>
 						</table>
 					</section>
 <section><h3>Example</h3>
-
-<pre class="code prettyprint lang-d">string text = "
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">text </span><span class="pun">= </span><span class="str">"
 	aBool=true
 	decimal = 3443.443
 	number=12071
@@ -246,75 +252,80 @@ $('#symbolSearchPane').show();
 	#And another comment!
 	world=hello
 	japan=false
-";
+	[group]
+	dog=false
+	#Who doesn't love cats?
+	cat=true
+"</span><span class="pun">;
 
-KeyValueConfig config;
+</span><span class="typ">KeyValueConfig </span><span class="pln">config</span><span class="pun">;
 
-immutable bool loaded = config.loadString(text);
-assert(loaded, "Failed to load string!");
+</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">loaded </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">text</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">loaded</span><span class="pun">, </span><span class="str">"Failed to load string!"</span><span class="pun">);
 
-assert(config.containsGroup("section"));
-config.removeGroup("section");
-assert(config.containsGroup("section") == false);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">containsGroup</span><span class="pun">(</span><span class="str">"section"</span><span class="pun">));
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">removeGroup</span><span class="pun">(</span><span class="str">"section"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">containsGroup</span><span class="pun">(</span><span class="str">"section"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
 
-assert(config.asBoolean("aBool"));
-assert(config.contains("time"));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">asBoolean</span><span class="pun">(</span><span class="str">"aBool"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"time"</span><span class="pun">));
 
-auto number = config["number"];
+</span><span class="kwd">auto </span><span class="pln">number </span><span class="pun">= </span><span class="pln">config</span><span class="pun">[</span><span class="str">"number"</span><span class="pun">];
 
-assert(number == 12071);
-assert(config["decimal"] == 3443.443);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">number </span><span class="pun">== </span><span class="lit">12071</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"decimal"</span><span class="pun">] == </span><span class="lit">3443.443</span><span class="pun">);
 
-assert(config.contains("another.world"));
-assert(config["another.world"] == "hello");
-config.remove("another.world");
-assert(config.contains("another.world") == false);
-assert(config.contains("anothers", "world") == false);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"another.world"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"another.world"</span><span class="pun">] == </span><span class="str">"hello"</span><span class="pun">);
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"another.world"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"another.world"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"anothers"</span><span class="pun">, </span><span class="str">"world"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
 
-assert(config.contains("number"));
-config.remove("number");
-assert(config.contains("number") == false);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"number"</span><span class="pun">));
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"number"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"number"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
 
-assert(config["another.japan"] == false);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"another.japan"</span><span class="pun">] == </span><span class="kwd">false</span><span class="pun">);
 
-writeln("Testing <a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html">getGroup</a>...");
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Testing getGroup..."</span><span class="pun">);
 
-auto group = config.getGroup("another");
+</span><span class="kwd">auto </span><span class="pln">group </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">getGroup</span><span class="pun">(</span><span class="str">"group"</span><span class="pun">);
 
-foreach(value; group)
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">value</span><span class="pun">; </span><span class="pln">group</span><span class="pun">)
 {
-	writeln(value);
+	</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">value<wbr/></span><span class="pun">.</span><span class="pln">comment</span><span class="pun">);
+	</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">value<wbr/></span><span class="pun">.</span><span class="pln">key</span><span class="pun">, </span><span class="str">" = "</span><span class="pun">, </span><span class="pln">value<wbr/></span><span class="pun">.</span><span class="pln">value</span><span class="pun">);
 }
 
-writeln();
+</span><span class="pln">writeln</span><span class="pun">();
 
-config.set("aBool", false);
-config["aBool"] = true;
-assert(config["aBool"].asString == "true");
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">set</span><span class="pun">(</span><span class="str">"aBool"</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
+</span><span class="pln">config</span><span class="pun">[</span><span class="str">"aBool"</span><span class="pun">] = </span><span class="kwd">true</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"aBool"</span><span class="pun">]<wbr/>.</span><span class="pln">asString </span><span class="pun">== </span><span class="str">"true"</span><span class="pun">);
 
-debug config.save();
-debug config.save("custom-config-format.dat");
+</span><span class="kwd">debug </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">();
+</span><span class="kwd">debug </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="str">"custom-config-format.dat"</span><span class="pun">);
 
-string noEqualSign = "
+</span><span class="typ">string </span><span class="pln">noEqualSign </span><span class="pun">= </span><span class="str">"
 	equal=sign
 	time=12:04
 	This is a really long sentence to test for a really long value string!
-";
+"</span><span class="pun">;
 
-bool equalSignValue = config.loadString(noEqualSign);
-assert(equalSignValue == false);
+</span><span class="typ">bool </span><span class="pln">equalSignValue </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">noEqualSign</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equalSignValue </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
 
-string invalidGroup = "
+</span><span class="typ">string </span><span class="pln">invalidGroup </span><span class="pun">= </span><span class="str">"
 	[first]
 	equal=sign
 	time=12:04
 	[second
 	another=key value is here
-";
+"</span><span class="pun">;
 
-bool invalidGroupValue = config.loadString(invalidGroup);
-assert(invalidGroupValue == false);
-</pre>
+</span><span class="typ">bool </span><span class="pln">invalidGroupValue </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">invalidGroup</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">invalidGroupValue </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
+</span></code></pre>
 </section>
 
 			</section>

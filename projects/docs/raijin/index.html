@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
 		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="./scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="./prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="./scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="./raijin/appconfig.html" class=" module">appconfig</a>
+								<a href="./raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="./raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="./raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="./raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="./raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="./raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="./raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="./raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
 								<a href="./raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="./raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="./raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="./raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="./raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="./raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="./raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="./raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="./raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -76,19 +83,64 @@ $('#symbolSearchPane').show();
 				</tr>
 			<tr>
 				<td>
-					<a href="./raijin/appconfig.html">raijin.appconfig</a>
+					<a href="./raijin/utils/array.html">raijin.utils.array</a>
 				</td>
 				<td>
-   This module combines the functionality of VariantConfig and configpath into one class.
+Various functions for working with arrays.
 
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<a href="./raijin/arrayutils.html">raijin.arrayutils</a>
+					<a href="./raijin/utils/debugtools.html">raijin.utils.debugtools</a>
 				</td>
 				<td>
-	Various functions for working with arrays.
+Functions for outputing a debug string.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/utils/file.html">raijin.utils.file</a>
+				</td>
+				<td>
+Various functions for dealing with files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/utils/path.html">raijin.utils.path</a>
+				</td>
+				<td>
+Various functions for dealing with path based manipulation and retrieval.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/utils/string.html">raijin.utils.string</a>
+				</td>
+				<td>
+This module contains a few additons to handling strings.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/utils/type.html">raijin.utils.type</a>
+				</td>
+				<td>
+Various functions to determine types at runtime.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./raijin/appconfig.html">raijin.appconfig</a>
+				</td>
+				<td>
+This module combines the functionality of VariantConfig and configpath into one class.
 
 				</td>
 			</tr>
@@ -97,7 +149,7 @@ $('#symbolSearchPane').show();
 					<a href="./raijin/cmdline.html">raijin.cmdline</a>
 				</td>
 				<td>
-	A simple module that handles user input on the command line.
+A simple module that handles user input on the command line.
 
 				</td>
 			</tr>
@@ -106,7 +158,7 @@ $('#symbolSearchPane').show();
 					<a href="./raijin/commandlineargs.html">raijin.commandlineargs</a>
 				</td>
 				<td>
-	This module contains a simple class that processes command line arguments and stores
+This module contains a simple class that processes command line arguments and stores
 	them in a hashtable. The hash table is static so this class object can be created multiple
 	times without having to reinitialize it when the arguments from main.
 
@@ -117,25 +169,7 @@ $('#symbolSearchPane').show();
 					<a href="./raijin/configpath.html">raijin.configpath</a>
 				</td>
 				<td>
-	Provides an easy way to work the users configuration directory.
-
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="./raijin/debugutils.html">raijin.debugutils</a>
-				</td>
-				<td>
-   Functions for outputing a debug string.
-
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="./raijin/fileutils.html">raijin.fileutils</a>
-				</td>
-				<td>
-	Various functions for dealing with files.
+Provides an easy way to work the users configuration directory.
 
 				</td>
 			</tr>
@@ -144,34 +178,16 @@ $('#symbolSearchPane').show();
 					<a href="./raijin/keyvalueconfig.html">raijin.keyvalueconfig</a>
 				</td>
 				<td>
-	This module manages a config file format in the form of key=value. Much like an ini file but simpler.
+This module manages a config file format in the form of key=value. Much like an ini file but simpler.
 
 				</td>
 			</tr>
 			<tr>
 				<td>
-					<a href="./raijin/pathutils.html">raijin.pathutils</a>
+					<a href="./raijin/timers.html">raijin.timers</a>
 				</td>
 				<td>
-	Various functions for dealing with path based manipulation and retrieval.
-
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="./raijin/stringutils.html">raijin.stringutils</a>
-				</td>
-				<td>
-	This module contains a few additons to handling strings.
-
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<a href="./raijin/typeutils.html">raijin.typeutils</a>
-				</td>
-				<td>
-	Various functions to determine types at runtime.
+Add support for creating a repeating timer.
 
 				</td>
 			</tr>

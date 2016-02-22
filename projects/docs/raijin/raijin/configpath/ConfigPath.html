@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class="selected module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,14 +76,14 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class ConfigPath</h1>
 			<section>
-				<p>	Allows for the creation and deletion of directories in the users configuration directory.
+				<p>Allows for the creation and deletion of directories in the users configuration directory.
 </p>
 
 					<section>
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -95,7 +102,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>		Intializes the application name to executables name and setups up config directory.
+								<td>Intializes the application name to executables name and setups up config directory.
 </td>
 							</tr>
 							<tr>
@@ -104,7 +111,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>		Intializes the application name to executables name and setups up config directory using supplied arguments.
+								<td>Intializes the application name to executables name and setups up config directory using supplied arguments.
 </td>
 							</tr>
 						</table>
@@ -123,7 +130,7 @@ $('#symbolSearchPane').show();
 										<code>createConfigDir</code>
 									</a>
 								</td>
-								<td>		Creates a directory in the users config directory.
+								<td>Creates a directory in the users config directory.
 </td>
 							</tr>
 							<tr>
@@ -132,7 +139,7 @@ $('#symbolSearchPane').show();
 										<code>getConfigDir</code>
 									</a>
 								</td>
-								<td>		Retries the path to the users config directory with an optional path appended to the end.
+								<td>Retries the path to the users config directory with an optional path appended to the end.
 </td>
 							</tr>
 							<tr>
@@ -141,23 +148,22 @@ $('#symbolSearchPane').show();
 										<code>removeConfigDir</code>
 									</a>
 								</td>
-								<td>		Removes a directory from the users config directory.
+								<td>Removes a directory from the users config directory.
 </td>
 							</tr>
 						</table>
 					</section>
 <section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">path </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">ConfigPath</span><span class="pun">(</span><span class="str">"DlangUnitOrg"</span><span class="pun">, </span><span class="str">"MyUnitTestApp"</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">pathNoOrganization </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">ConfigPath</span><span class="pun">;
 
-<pre class="code prettyprint lang-d">auto path = new ConfigPath("DlangUnitOrg", "MyUnitTestApp");
-auto pathNoOrganization = new ConfigPath;
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Testing ConfigPath class..."</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">getConfigDir</span><span class="pun">(</span><span class="str">"tests"</span><span class="pun">));
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">pathNoOrganization<wbr/></span><span class="pun">.</span><span class="pln">getConfigDir</span><span class="pun">(</span><span class="str">"tests"</span><span class="pun">));
 
-import std.stdio;
-writeln("Testing ConfigPath class...");
-writeln(path.getConfigDir("tests"));
-writeln(pathNoOrganization.getConfigDir("tests"));
-
-writeln();
-</pre>
+</span><span class="pln">writeln</span><span class="pun">();
+</span></code></pre>
 </section>
 
 			</section>

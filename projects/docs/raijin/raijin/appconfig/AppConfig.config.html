@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class="selected module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class="selected module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,18 +76,20 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function AppConfig.config</h1>
 			<section>
-				<p>		Helper property for accessing VariantConfig methods.
+				<p>Helper property for accessing VariantConfig methods.
 </p>
-<section>
-</section>
+<section></section>
 
 					<section>
 						<h3>Prototype</h3>
-						<pre class="code prettyprint lang-d prototype">
-<a href="../../raijin/keyvalueconfig/KeyValueConfig.html">KeyValueConfig</a> config() @property;</pre>
+						<div class="prototype">
+							<code class="lang-d">
+<a href="../../raijin/keyvalueconfig/KeyValueConfig.html"><span class="typ">KeyValueConfig</span></a> <span class="pln">config<span class="pun">()</span><span class="pln"> </span><span class="pun">@</span><span class="pln">property</span><span class="pun">;</span>
+							</code>
+						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>			A VariantConfig object.
+<p>A VariantConfig object.
 </p>
 </section>
 

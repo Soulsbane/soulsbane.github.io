@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class="selected module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class="selected module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,14 +76,14 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class AppConfig</h1>
 			<section>
-				<p>	This class combines the functionality of VariantConfig and configpath into one class.
+				<p>This class combines the functionality of VariantConfig and configpath into one class.
 </p>
 
 					<section>
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -95,7 +102,7 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>		Used for creating directories in users <a href="../../raijin/appconfig/AppConfig.config.html"><code class="prettyprint lang-d">config</code></a> directory and setting up the <a href="../../raijin/appconfig/AppConfig.config.html"><code class="prettyprint lang-d">config</code></a> file app.config.
+								<td>Used for creating directories in users <a href="../../raijin/appconfig/AppConfig.config.html"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.config.html"><span class="pln">config</span></a></span></code></a> directory and setting up the <a href="../../raijin/appconfig/AppConfig.config.html"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.config.html"><span class="pln">config</span></a></span></code></a> file app.config.
 </td>
 							</tr>
 							<tr>
@@ -104,8 +111,8 @@ $('#symbolSearchPane').show();
 										<code>this</code>
 									</a>
 								</td>
-								<td>		Overload that allows setting of <a href="../../raijin/appconfig/AppConfig.this.html#organizationName"><code class="prettyprint lang-d">organizationName</code></a>, <a href="../../raijin/appconfig/AppConfig.this.html#applicationName"><code class="prettyprint lang-d">applicationName</code></a> and <a href="../../raijin/appconfig/AppConfig.this.html#defaultConfigFileData"><code class="prettyprint lang-d">defaultConfigFileData</code></a> to be used
-		when creating directories in users <a href="../../raijin/appconfig/AppConfig.config.html"><code class="prettyprint lang-d">config</code></a> directory and setting up the <a href="../../raijin/appconfig/AppConfig.config.html"><code class="prettyprint lang-d">config</code></a> file app.config.
+								<td>Overload that allows setting of <a href="../../raijin/appconfig/AppConfig.this.html#organizationName"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.this.html#organizationName"><span class="pln">organizationName</span></a></span></code></a>, <a href="../../raijin/appconfig/AppConfig.this.html#applicationName"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.this.html#applicationName"><span class="pln">applicationName</span></a></span></code></a> and <a href="../../raijin/appconfig/AppConfig.this.html#defaultConfigFileData"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.this.html#defaultConfigFileData"><span class="pln">defaultConfigFileData</span></a></span></code></a> to be used
+		when creating directories in users <a href="../../raijin/appconfig/AppConfig.config.html"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.config.html"><span class="pln">config</span></a></span></code></a> directory and setting up the <a href="../../raijin/appconfig/AppConfig.config.html"><code class="lang-d"><span class="pln"><a href="../../raijin/appconfig/AppConfig.config.html"><span class="pln">config</span></a></span></code></a> file app.config.
 </td>
 							</tr>
 						</table>
@@ -124,8 +131,8 @@ $('#symbolSearchPane').show();
 									<a href="../../raijin/appconfig/AppConfig.config.html" class="public property"><code>config</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../raijin/keyvalueconfig/KeyValueConfig.html">KeyValueConfig</a></code></td>
-								<td>		Helper property for accessing VariantConfig methods.
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../raijin/keyvalueconfig/KeyValueConfig.html"><span class="typ">KeyValueConfig</span></a></code></td>
+								<td>Helper property for accessing VariantConfig methods.
 </td>
 							</tr>
 							<tr>
@@ -133,8 +140,8 @@ $('#symbolSearchPane').show();
 									<a href="../../raijin/appconfig/AppConfig.path.html" class="public property"><code>path</code></a>
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
-								<td class="typecol"><code class="prettyprint lang-d"><a href="../../raijin/configpath/ConfigPath.html">ConfigPath</a></code></td>
-								<td>		Helper property for accessing ConfigPath methods.
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../raijin/configpath/ConfigPath.html"><span class="typ">ConfigPath</span></a></code></td>
+								<td>Helper property for accessing ConfigPath methods.
 </td>
 							</tr>
 						</table>

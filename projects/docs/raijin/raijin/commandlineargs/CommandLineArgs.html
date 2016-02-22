@@ -6,20 +6,39 @@
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../prettify/prettify.js">/**/</script>
 		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
 	</head>
-	<body onload="prettyPrint(); setupDdox();">
+	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
 							<li>
-								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
+								<a href="../../raijin/utils/array.html" class=" module">array</a>
 							</li>
 							<li>
-								<a href="../../raijin/arrayutils.html" class=" module">arrayutils</a>
+								<a href="../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+							<li>
+								<a href="../../raijin/utils/type.html" class=" module">type</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
 								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
@@ -31,22 +50,10 @@
 								<a href="../../raijin/configpath.html" class=" module">configpath</a>
 							</li>
 							<li>
-								<a href="../../raijin/debugutils.html" class=" module">debugutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/fileutils.html" class=" module">fileutils</a>
-							</li>
-							<li>
 								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/pathutils.html" class=" module">pathutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/stringutils.html" class=" module">stringutils</a>
-							</li>
-							<li>
-								<a href="../../raijin/typeutils.html" class=" module">typeutils</a>
+								<a href="../../raijin/timers.html" class=" module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -69,14 +76,14 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class CommandLineArgs</h1>
 			<section>
-				<p>	Handles the processing of command line arguments.
+				<p>Handles the processing of command line arguments.
 </p>
 
 					<section>
 						<h3>Inherits from</h3>
 						<ul>
 							<li>
-								<code class="prettyprint lang-d"><code class="prettyprint lang-d">Object</code></code>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
  (base class)
 							</li>
 						</ul>
@@ -95,7 +102,7 @@ $('#symbolSearchPane').show();
 										<code>addFlag</code>
 									</a>
 								</td>
-								<td>		Registers a flag argument eg. --flag
+								<td>Registers a flag argument eg. --flag
 </td>
 							</tr>
 							<tr>
@@ -104,7 +111,7 @@ $('#symbolSearchPane').show();
 										<code>contains</code>
 									</a>
 								</td>
-								<td>		Determines if the <a href="../../raijin/commandlineargs/CommandLineArgs.contains.html#key"><code class="prettyprint lang-d">key</code></a>(command line argument) exists.
+								<td>Determines if the <a href="../../raijin/commandlineargs/CommandLineArgs.contains.html#key"><code class="lang-d"><span class="pln">key</span></code></a>(command line argument) exists.
 </td>
 							</tr>
 							<tr>
@@ -113,7 +120,7 @@ $('#symbolSearchPane').show();
 										<code>getProgramName</code>
 									</a>
 								</td>
-								<td>		Returns the name of the program.
+								<td>Returns the name of the program.
 </td>
 							</tr>
 							<tr>
@@ -122,7 +129,7 @@ $('#symbolSearchPane').show();
 										<code>onInvalidArg</code>
 									</a>
 								</td>
-								<td>		Called when an invalid argument is passed on the <a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArg.html#command"><code class="prettyprint lang-d">command</code></a> line.
+								<td>Should not be called directly. Called when an invalid argument is passed on the <a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArg.html#command"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.onInvalidArg.html#command"><span class="pln">command</span></a></span></code></a> line.
 </td>
 							</tr>
 							<tr>
@@ -131,7 +138,16 @@ $('#symbolSearchPane').show();
 										<code>onNoArgs</code>
 									</a>
 								</td>
-								<td>		Called when no arguments were passed on the command line.
+								<td>Should not be called directly. Called when no arguments were passed on the command line.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/commandlineargs/CommandLineArgs.onNonArg.html" class="public">
+										<code>onNonArg</code>
+									</a>
+								</td>
+								<td>Should not be called directly. Called when when an <a href="../../raijin/commandlineargs/CommandLineArgs.onNonArg.html#argument"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.onNonArg.html#argument"><span class="pln">argument</span></a></span></code></a> does not contain a leading '-' and ignoreNonArgs is enabled.
 </td>
 							</tr>
 							<tr>
@@ -140,7 +156,7 @@ $('#symbolSearchPane').show();
 										<code>onPrintHelp</code>
 									</a>
 								</td>
-								<td>		Default print method for printing registered command line options.
+								<td>Should not be called directly. Default print method for printing registered command line options.
 </td>
 							</tr>
 							<tr>
@@ -149,7 +165,7 @@ $('#symbolSearchPane').show();
 										<code>onPrintVersion</code>
 									</a>
 								</td>
-								<td>		Prints the program version string when -version argument is passed.
+								<td>Should not be called directly. Prints the program version string when -version argument is passed.
 </td>
 							</tr>
 							<tr>
@@ -158,7 +174,7 @@ $('#symbolSearchPane').show();
 										<code>onValidArg</code>
 									</a>
 								</td>
-								<td>		Called each time a valid <a href="../../raijin/commandlineargs/CommandLineArgs.onValidArg.html#argument"><code class="prettyprint lang-d">argument</code></a> is passed.
+								<td>Should not be called directly. Called each time a valid <a href="../../raijin/commandlineargs/CommandLineArgs.onValidArg.html#argument"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.onValidArg.html#argument"><span class="pln">argument</span></a></span></code></a> is passed.
 </td>
 							</tr>
 							<tr>
@@ -167,7 +183,7 @@ $('#symbolSearchPane').show();
 										<code>onValidArgs</code>
 									</a>
 								</td>
-								<td>		Called after all arguments have been processed and no invalid arguments were found.
+								<td>Should not be called directly. Called after all arguments have been processed and no invalid arguments were found.
 </td>
 							</tr>
 							<tr>
@@ -176,7 +192,7 @@ $('#symbolSearchPane').show();
 										<code>opIndex</code>
 									</a>
 								</td>
-								<td>		Retrieves the value of <a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><code class="prettyprint lang-d">key</code></a> where <a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><code class="prettyprint lang-d">key</code></a> is the name of the command line argument.
+								<td>Retrieves the value of <a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><span class="pln">key</span></a></span></code></a> where <a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.opIndex.html#key"><span class="pln">key</span></a></span></code></a> is the name of the command line argument.
 		T is the the type that returned value should be converted to.
 </td>
 							</tr>
@@ -186,7 +202,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>		Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="prettyprint lang-d">value</code></a> to a commandline argument stored internally.
+								<td>Assigns a <a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.opIndexAssign.html#value"><span class="pln">value</span></a></span></code></a> to a commandline argument stored internally.
 </td>
 							</tr>
 							<tr>
@@ -195,7 +211,7 @@ $('#symbolSearchPane').show();
 										<code>opIndexAssign</code>
 									</a>
 								</td>
-								<td>		Assigns a value to a commandline argument stored internally but uses ArgValues as the value.
+								<td>Assigns a value to a commandline argument stored internally but uses ArgValues as the value.
 </td>
 							</tr>
 							<tr>
@@ -204,7 +220,7 @@ $('#symbolSearchPane').show();
 										<code>process</code>
 									</a>
 								</td>
-								<td>		Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="prettyprint lang-d">arguments</code></a> passed to the program.
+								<td>Handles the registration of command line <a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><code class="lang-d"><span class="pln"><a href="../../raijin/commandlineargs/CommandLineArgs.process.html#arguments"><span class="pln">arguments</span></a></span></code></a> passed to the program.
 </td>
 							</tr>
 							<tr>
@@ -213,7 +229,7 @@ $('#symbolSearchPane').show();
 										<code>safeGet</code>
 									</a>
 								</td>
-								<td>		Retrieves the raw value passed via the command line in a safe way.
+								<td>Retrieves the raw value passed via the command line in a safe way.
 </td>
 							</tr>
 							<tr>
@@ -222,38 +238,37 @@ $('#symbolSearchPane').show();
 										<code>setProgramVersion</code>
 									</a>
 								</td>
-								<td>		Sets the programs version string to be used with -version argument.
+								<td>Sets the programs version string to be used with -version argument.
 </td>
 							</tr>
 						</table>
 					</section>
 <section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">arguments </span><span class="pun">= [</span><span class="str">"testapp"</span><span class="pun">, </span><span class="str">"-flag"</span><span class="pun">, </span><span class="str">"-value=this is a test"</span><span class="pun">, </span><span class="str">"-aFloat=4.44"</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">args </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">CommandLineArgs</span><span class="pun">;
 
-<pre class="code prettyprint lang-d">auto arguments = ["testapp", "-flag", "-value=this is a test", "-aFloat=4.44"];
-auto args = new CommandLineArgs;
+</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">addFlag</span><span class="pun">(</span><span class="str">"flag"</span><span class="pun">, </span><span class="str">"A test flag"</span><span class="pun">);
+</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">addCommand</span><span class="pun">(</span><span class="str">"aFloat"</span><span class="pun">, </span><span class="lit">3.14</span><span class="pun">, </span><span class="str">"A float value"</span><span class="pun">);
+</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">addCommand</span><span class="pun">(</span><span class="str">"integer"</span><span class="pun">, </span><span class="lit">100</span><span class="pun">, </span><span class="str">"Sets value"</span><span class="pun">);
+</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">addCommand</span><span class="pun">(</span><span class="str">"value"</span><span class="pun">, </span><span class="str">"hello world"</span><span class="pun">, </span><span class="str">"Just a silly value."</span><span class="pun">);
+</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">process</span><span class="pun">(</span><span class="pln">arguments</span><span class="pun">);
 
-args.addFlag("flag", "A test flag");
-args.addCommand("aFloat", 3.14, "A float value");
-args.addCommand("integer", 100, "Sets value");
-args.addCommand("value", "hello world", "Just a silly value.");
-args.process(arguments);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">asBoolean</span><span class="pun">(</span><span class="str">"flag"</span><span class="pun">) == </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">args</span><span class="pun">[</span><span class="str">"flag"</span><span class="pun">] == </span><span class="kwd">true</span><span class="pun">);
 
-assert(args.asBoolean("flag") == true);
-assert(args["flag"] == true);
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">math</span><span class="pun">;
 
-import std.math;
+</span><span class="typ">float </span><span class="pln">aFloat </span><span class="pun">= </span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">asDecimal</span><span class="pun">(</span><span class="str">"aFloat"</span><span class="pun">);
 
-float aFloat = args.asDecimal("aFloat");
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">feqrel</span><span class="pun">(</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">asDecimal</span><span class="pun">(</span><span class="str">"aFloat"</span><span class="pun">), </span><span class="lit">4.44</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">feqrel</span><span class="pun">(</span><span class="pln">aFloat</span><span class="pun">, </span><span class="lit">4.44</span><span class="pun">));
 
-assert(feqrel(args.asDecimal("aFloat"), 4.44));
-assert(feqrel(aFloat, 4.44));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">feqrel</span><span class="pun">(</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">asInteger</span><span class="pun">(</span><span class="str">"aFloat"</span><span class="pun">), </span><span class="lit">4.44</span><span class="pun">));
 
-assert(feqrel(args.asInteger("aFloat"), 4.44));
-
-assert(args.contains("integer") == true);
-assert(args.contains("valuez") == false);
-assert(args["integer"] == 100);
-</pre>
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"integer"</span><span class="pun">) == </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">args<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"valuez"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">args</span><span class="pun">[</span><span class="str">"integer"</span><span class="pun">] == </span><span class="lit">100</span><span class="pun">);
+</span></code></pre>
 </section>
 
 			</section>
