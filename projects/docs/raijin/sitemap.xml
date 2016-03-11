@@ -29,8 +29,10 @@
 <url><loc>http://127.0.0.1/raijin/utils/string/pluralize.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/string/removeLeadingChars.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/string/removeLeadingCharsInPlace.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/utils/string/toBoolean.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/string/toStringAll.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/string/toStringAll.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/utils/string/toYesNo.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/type.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/type/DynamicType.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/utils/type/DynamicType.opAssign.html</loc></url>
@@ -114,13 +116,16 @@
 <url><loc>http://127.0.0.1/raijin/timers.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.onCountdownFinished.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.setCallBack.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.start.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.stop.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.name.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/CountdownTimer.name.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.onTimer.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.onTimerStart.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.onTimerStop.html</loc></url>
+<url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.setCallBack.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.start.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.stop.html</loc></url>
 <url><loc>http://127.0.0.1/raijin/timers/RepeatingTimer.name.html</loc></url>

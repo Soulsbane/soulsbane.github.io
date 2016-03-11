@@ -175,11 +175,10 @@ $('#symbolSearchPane').show();
 <pre class="code"><code class="lang-d"><span class="kwd">class </span><span class="typ">MyCommand </span><span class="pun">: </span><span class="typ">CommandProcessor
 </span><span class="pun">{
 	</span><span class="com">// All on&lt;name&gt; commands can be overriden.
-	</span><span class="kwd">override </span><span class="typ">void <a href="../../raijin/cmdline/CommandProcessor.onCommand.html"></span><span class="pln">onCommand</a></span><span class="pun">(</span><span class="kwd">const </span><span class="typ">string </span><span class="pln">command</span><span class="pun">)
+	</span><span class="kwd">override </span><span class="typ">void <a href="../../raijin/cmdline/CommandProcessor.onCommand.html"></span><span class="pln">onCommand</a></span><span class="pun">(</span><span class="kwd">const </span><span class="typ">string </span><span class="pln">command</span><span class="pun">, </span><span class="kwd">const </span><span class="typ">string</span><span class="pun">[] </span><span class="pln">args</span><span class="pun">)
 	{
-
 		</span><span class="com">// Will only print "test" since it is the only command registered.
-		</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"inherited onCommand: "</span><span class="pun">, </span><span class="pln">command</span><span class="pun">);
+		</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Command: "</span><span class="pun">, </span><span class="pln">command</span><span class="pun">, </span><span class="str">" Args: "</span><span class="pun">, </span><span class="pln">args</span><span class="pun">);
 	}
 }
 

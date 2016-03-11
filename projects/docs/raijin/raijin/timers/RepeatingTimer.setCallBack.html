@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function CommandProcessor.addCommand</title>
+		<title>Function RepeatingTimer.setCallBack</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -41,7 +41,7 @@
 								<a href="../../raijin/appconfig.html" class=" module">appconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/cmdline.html" class="selected module">cmdline</a>
+								<a href="../../raijin/cmdline.html" class=" module">cmdline</a>
 							</li>
 							<li>
 								<a href="../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
@@ -53,7 +53,7 @@
 								<a href="../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
 							</li>
 							<li>
-								<a href="../../raijin/timers.html" class=" module">timers</a>
+								<a href="../../raijin/timers.html" class="selected module">timers</a>
 							</li>
 						</ul>
 							</li>
@@ -74,9 +74,9 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function CommandProcessor.addCommand</h1>
+			<h1>Function RepeatingTimer.setCallBack</h1>
 			<section>
-				<p>Adds a <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><span class="pln">command</span></a></span></code></a> that should be processed.
+				<p>Sets a <a href="../../raijin/timers/RepeatingTimer.setCallBack.html#callback"><code class="lang-d"><span class="pln">callback</span></code></a> to a function instead of having to inherit from class.
 </p>
 <section></section>
 
@@ -84,11 +84,11 @@ $('#symbolSearchPane').show();
 						<h3>Prototype</h3>
 						<div class="prototype">
 							<code class="lang-d">
-<span class="typ">void</span> <span class="pln">addCommand</span><span class="pun">(</span>
+<span class="typ">void</span> <span class="pln">setCallBack</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">command</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">string</span> <span class="pln">callBackName</span><span class="pun">,</span>
 								<br/>
-&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">description</span>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">callback</span>
 								<br/>
 <span class="pun">)</span><span class="pun">;</span>
 							</code>
@@ -96,8 +96,8 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="command">command</td><td> The <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><code class="lang-d"><span class="pln">command</span></code></a> to add.</td></tr>
-<tr><td id="description">description</td><td> A <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#description"><code class="lang-d"><span class="pln">description</span></code></a> of what the <a href="../../raijin/cmdline/CommandProcessor.addCommand.html#command"><code class="lang-d"><span class="pln">command</span></code></a> does.</td></tr>
+<tr><td id="callBackName">callBackName</td><td> Name of the <a href="../../raijin/timers/RepeatingTimer.setCallBack.html#callback"><code class="lang-d"><span class="pln">callback</span></code></a> to use(valid values are: <a href="../../raijin/timers/RepeatingTimer.onTimer.html"><code class="lang-d"><span class="pln">onTimer</span></code></a>, <a href="../../raijin/timers/RepeatingTimer.onTimerStart.html"><code class="lang-d"><span class="pln">onTimerStart</span></code></a> or <a href="../../raijin/timers/RepeatingTimer.onTimerStop.html"><code class="lang-d"><span class="pln">onTimerStop</span></code></a>).</td></tr>
+<tr><td id="callback">callback</td><td> The function to be called. Function must take no arguments and have void return type.</td></tr>
 </table>
 </section>
 

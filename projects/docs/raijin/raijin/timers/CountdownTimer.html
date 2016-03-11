@@ -104,7 +104,7 @@ $('#symbolSearchPane').show();
 									<span class="tableEntryAnnotation">[get]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">string</span></code></td>
-								<td>Returns the <code class="lang-d"><span class="pln"><span class="pln">name</span></span></code> of the thread(this.toString by default).
+								<td>Returns the <code class="lang-d"><span class="pln"><span class="pln">name</span></span></code> of the timer(this.toString by default).
 </td>
 							</tr>
 							<tr>
@@ -113,7 +113,7 @@ $('#symbolSearchPane').show();
 									<span class="tableEntryAnnotation">[set]</span>
 								</td>
 								<td class="typecol"><code class="prettyprint lang-d"><span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span></code></td>
-								<td>Sets the threads <a href="../../raijin/timers/CountdownTimer.name.html#name"><code class="lang-d"><span class="pln"><a href="../../raijin/timers/CountdownTimer.name.html#name"><span class="pln">name</span></a></span></code></a>.
+								<td>Sets the timers <a href="../../raijin/timers/CountdownTimer.name.html#name"><code class="lang-d"><span class="pln"><a href="../../raijin/timers/CountdownTimer.name.html#name"><span class="pln">name</span></a></span></code></a>.
 </td>
 							</tr>
 						</table>
@@ -137,11 +137,29 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../raijin/timers/CountdownTimer.setCallBack.html" class="public">
+										<code>setCallBack</code>
+									</a>
+								</td>
+								<td>Sets a <a href="../../raijin/timers/CountdownTimer.setCallBack.html#callback"><code class="lang-d"><span class="pln"><a href="../../raijin/timers/CountdownTimer.setCallBack.html#callback"><span class="pln">callback</span></a></span></code></a> to a function instead of having to inherit from class.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../raijin/timers/CountdownTimer.start.html" class="public">
 										<code>start</code>
 									</a>
 								</td>
 								<td>Starts the timer
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/timers/CountdownTimer.stop.html" class="public">
+										<code>stop</code>
+									</a>
+								</td>
+								<td>Stops the timer.
 </td>
 							</tr>
 						</table>
@@ -160,6 +178,8 @@ $('#symbolSearchPane').show();
 
 </span><span class="typ">void </span><span class="pln">main</span><span class="pun">()
 {
+	</span><span class="kwd">auto </span><span class="pln">delay </span><span class="pun">= </span><span class="pln">dur</span><span class="pun">!(</span><span class="str">"seconds"</span><span class="pun">)(</span><span class="lit">1</span><span class="pun">);
+
 	</span><span class="kwd">auto </span><span class="pln">countdown </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">CountdownTimer</span><span class="pun">;
 	</span><span class="pln">countdown<wbr/></span><span class="pun">.</span><span class="pln">start</span><span class="pun">(</span><span class="pln">delay</span><span class="pun">);
 
