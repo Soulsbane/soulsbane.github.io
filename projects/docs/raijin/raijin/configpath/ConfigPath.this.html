@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>ConfigPath.this - multiple declarations</title>
+		<title>Function ConfigPath.this</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -14,6 +14,20 @@
 							<li class=" tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">types</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/types/boolean.html" class=" module">boolean</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/dynamic.html" class=" module">dynamic</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/functions.html" class=" module">functions</a>
+							</li>
+						</ul>
+							</li>
 							<li class="collapsed tree-view">
 								<a href="#" class="package">utils</a>
 						<ul class="tree-view">
@@ -30,10 +44,10 @@
 								<a href="../../raijin/utils/path.html" class=" module">path</a>
 							</li>
 							<li>
-								<a href="../../raijin/utils/string.html" class=" module">string</a>
+								<a href="../../raijin/utils/process.html" class=" module">process</a>
 							</li>
 							<li>
-								<a href="../../raijin/utils/type.html" class=" module">type</a>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
 							</li>
 						</ul>
 							</li>
@@ -74,28 +88,8 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>ConfigPath.this - multiple declarations</h1>
-			<ul>
-				<li>Function ConfigPath.this</li>
-				<li>Function ConfigPath.this</li>
-			</ul>
+			<h1>Function ConfigPath.this</h1>
 			<section>
-				<h2>Function ConfigPath.this</h2>
-				<p>Intializes the application name to executables name and setups up config directory.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="pln">this<span class="pun">()</span><span class="pln"> </span><span class="pun">@</span><span class="pln">safe</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-
-			</section>
-			<section>
-				<h2>Function ConfigPath.this</h2>
 				<p>Intializes the application name to executables name and setups up config directory using supplied arguments.
 </p>
 <section></section>
@@ -104,7 +98,7 @@ $('#symbolSearchPane').show();
 						<h3>Prototype</h3>
 						<div class="prototype">
 							<code class="lang-d">
-<span class="pln">this</span><span class="pun">(</span>
+<span class="kwd">ref </span><span class="pln">this</span><span class="pun">(</span>
 								<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">organizationName</span><span class="pun">,</span>
 								<br/>
@@ -124,6 +118,8 @@ $('#symbolSearchPane').show();
 			</section>
 			<section>
 				<h2>Authors</h2>
+<p>Paul Crane
+</p>
 
 			</section>
 			<section>

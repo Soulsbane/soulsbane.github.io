@@ -15,6 +15,20 @@
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
+								<a href="#" class="package">types</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/types/boolean.html" class=" module">boolean</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/dynamic.html" class=" module">dynamic</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/functions.html" class=" module">functions</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
 								<a href="#" class="package">utils</a>
 						<ul class="tree-view">
 							<li>
@@ -30,10 +44,10 @@
 								<a href="../../raijin/utils/path.html" class=" module">path</a>
 							</li>
 							<li>
-								<a href="../../raijin/utils/string.html" class=" module">string</a>
+								<a href="../../raijin/utils/process.html" class=" module">process</a>
 							</li>
 							<li>
-								<a href="../../raijin/utils/type.html" class=" module">type</a>
+								<a href="../../raijin/utils/string.html" class=" module">string</a>
 							</li>
 						</ul>
 							</li>
@@ -90,6 +104,26 @@ $('#symbolSearchPane').show();
 						</ul>
 					</section>
 					<section>
+						<h3>Properties</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.showPrompt.html" class="public property"><code>showPrompt</code></a>
+									<span class="tableEntryAnnotation">[get]</span>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><span class="typ">bool</span></code></td>
+								<td>Helper property for accessing whether the prompt is set to be shown.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
 						<h3>Methods</h3>
 						<table>
 							<col class="caption"/>
@@ -121,7 +155,7 @@ $('#symbolSearchPane').show();
 										<code>onCommand</code>
 									</a>
 								</td>
-								<td>Recieves commands sent from <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><span class="pln">processCommands</span></a></span></code></a>
+								<td>Receives commands sent from <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><span class="pln">processCommands</span></a></span></code></a>
 </td>
 							</tr>
 							<tr>
@@ -140,6 +174,15 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln">processCommands</span></code></a> before commands are handled.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/cmdline/CommandProcessor.onInvalidCommand.html" class="public">
+										<code>onInvalidCommand</code>
+									</a>
+								</td>
+								<td>Called by <a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.processCommands.html"><span class="pln">processCommands</span></a></span></code></a> when an invalid <a href="../../raijin/cmdline/CommandProcessor.onInvalidCommand.html#command"><code class="lang-d"><span class="pln"><a href="../../raijin/cmdline/CommandProcessor.onInvalidCommand.html#command"><span class="pln">command</span></a></span></code></a> is sent.
 </td>
 							</tr>
 							<tr>
@@ -191,6 +234,8 @@ $('#symbolSearchPane').show();
 			</section>
 			<section>
 				<h2>Authors</h2>
+<p>Paul Crane
+</p>
 
 			</section>
 			<section>

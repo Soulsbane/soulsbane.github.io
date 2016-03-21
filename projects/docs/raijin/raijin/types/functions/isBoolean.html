@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function isBoolean</title>
+		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">raijin</a>
+						<ul class="tree-view">
+							<li class=" tree-view">
+								<a href="#" class="package">types</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/types/boolean.html" class=" module">boolean</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/dynamic.html" class=" module">dynamic</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/functions.html" class="selected module">functions</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">utils</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/utils/array.html" class=" module">array</a>
+							</li>
+							<li>
+								<a href="../../../raijin/utils/debugtools.html" class=" module">debugtools</a>
+							</li>
+							<li>
+								<a href="../../../raijin/utils/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../../raijin/utils/path.html" class=" module">path</a>
+							</li>
+							<li>
+								<a href="../../../raijin/utils/process.html" class=" module">process</a>
+							</li>
+							<li>
+								<a href="../../../raijin/utils/string.html" class=" module">string</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../../raijin/appconfig.html" class=" module">appconfig</a>
+							</li>
+							<li>
+								<a href="../../../raijin/cmdline.html" class=" module">cmdline</a>
+							</li>
+							<li>
+								<a href="../../../raijin/commandlineargs.html" class=" module">commandlineargs</a>
+							</li>
+							<li>
+								<a href="../../../raijin/configpath.html" class=" module">configpath</a>
+							</li>
+							<li>
+								<a href="../../../raijin/keyvalueconfig.html" class=" module">keyvalueconfig</a>
+							</li>
+							<li>
+								<a href="../../../raijin/timers.html" class=" module">timers</a>
+							</li>
+						</ul>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function isBoolean</h1>
+			<section>
+				<p>Determines if a <a href="../../raijin/types/functions/isBoolean.html#value"><code class="lang-d"><span class="pln"><a href="../../../raijin/types/functions/isBoolean.html#value"><span class="pln">value</span></a></span></code></a> is of type boolean using 0, 1, true and false as qualifiers.
+</p>
+<section></section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">bool</span> <span class="pln">isBoolean</span><span class="pun">(</span><span class="pln">T</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="kwd">const </span><span class="pln">T</span> <span class="pln">value</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">AllowNumericBooleanValues</span> <span class="pln">allowInteger</span> <span class="pun">=</span> <span class="typ">AllowNumericBooleanValues<wbr/></span><span class="pun">.</span><span class="pln">yes</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="pun">@</span><span class="pln">trusted</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="value">value</td><td> number or boolean string to use. Valid values of 0, 1, "0", "1", "true", "false"</td></tr>
+<tr><td id="allowInteger">allowInteger</td><td> Set to allowNumericBooleanValues.yes if a true/false <a href="../../../raijin/types/functions/isBoolean.html#value"><code class="lang-d"><span class="pln">value</span></code></a> can be a numeric 0 or 1</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>true if the <a href="../../../raijin/types/functions/isBoolean.html#value"><code class="lang-d"><span class="pln">value</span></code></a> is a boolean false otherwise.
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="str">"0"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"1"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"2"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"true"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"false"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"trues"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"0"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean</span><span class="pun">(</span><span class="typ">AllowNumericBooleanValues<wbr/></span><span class="pun">.</span><span class="pln">no</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"1"<wbr/></span><span class="pun">.</span><span class="pln">isBoolean</span><span class="pun">(</span><span class="typ">AllowNumericBooleanValues<wbr/></span><span class="pun">.</span><span class="pln">no</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="lit">0<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="lit">1<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="lit">2<wbr/></span><span class="pun">.</span><span class="pln">isBoolean </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p>Paul Crane
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+
+			</section>
+			<section>
+				<h2>License</h2>
+
+			</section>
+		</div>
+	</body>
+</html>
