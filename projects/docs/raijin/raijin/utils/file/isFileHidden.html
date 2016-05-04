@@ -11,7 +11,7 @@
 	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -21,14 +21,26 @@
 								<a href="../../../raijin/types/boolean.html" class=" module">boolean</a>
 							</li>
 							<li>
+								<a href="../../../raijin/types/callbacks.html" class=" module">callbacks</a>
+							</li>
+							<li>
 								<a href="../../../raijin/types/dynamic.html" class=" module">dynamic</a>
 							</li>
 							<li>
 								<a href="../../../raijin/types/functions.html" class=" module">functions</a>
 							</li>
+							<li>
+								<a href="../../../raijin/types/queue.html" class=" module">queue</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/records.html" class=" module">records</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/stack.html" class=" module">stack</a>
+							</li>
 						</ul>
 							</li>
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">utils</a>
 						<ul class="tree-view">
 							<li>
@@ -90,7 +102,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function isFileHidden</h1>
 			<section>
-				<p>Determines if <a href="../../raijin/utils/file/isFileHidden.html#fileName"><code class="lang-d"><span class="pln"><a href="../../../raijin/utils/file/isFileHidden.html#fileName"><span class="pln">fileName</span></a></span></code></a> is hidden.
+				<p>Determines if fileName is hidden.
 </p>
 <section></section>
 
@@ -112,14 +124,29 @@ $('#symbolSearchPane').show();
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>true if the <a href="../../../raijin/utils/file/isFileHidden.html#fileName"><code class="lang-d"><span class="pln">fileName</span></code></a> is hidden false otherwise.
+<p>true if the fileName is hidden false otherwise.
 </p>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="kwd">immutable </span><span class="typ">string <a href="../../../raijin/utils/file/isFileHidden.html#fileName"></span><span class="pln">fileName</a> </span><span class="pun">= </span><span class="str">"unittest-ensure-test.txt"</span><span class="pun">;
+<pre class="code"><code class="lang-d"><span class="kwd">immutable </span><span class="typ">string </span><span class="pln">fileName </span><span class="pun">= </span><span class="str">"unittest-ensure-test.txt"</span><span class="pun">;
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">fileName<wbr/></span><span class="pun">.</span><span class="pln">ensureFileExists</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">fileName<wbr/></span><span class="pun">.</span><span class="pln">removeFileIfExists</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">fileName<wbr/></span><span class="pun">.</span><span class="pln">ensureFileExists</span><span class="pun">(</span><span class="str">"data to write"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">fileName<wbr/></span><span class="pun">.</span><span class="pln">removeFileIfExists</span><span class="pun">);
+
+</span><span class="kwd">immutable </span><span class="typ">string </span><span class="pln">hiddenFile </span><span class="pun">= </span><span class="str">".ahiddenfile"</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hiddenFile<wbr/></span><span class="pun">.</span><span class="pln">ensureFileExists</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hiddenFile<wbr/></span><span class="pun">.</span><span class="pln">isFileHidden</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hiddenFile<wbr/></span><span class="pun">.</span><span class="pln">removeFileIfExists</span><span class="pun">);
+
+</span><span class="kwd">immutable </span><span class="typ">string </span><span class="pln">nonHiddenFile </span><span class="pun">= </span><span class="str">"aNonHiddenfile"</span><span class="pun">;
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">nonHiddenFile<wbr/></span><span class="pun">.</span><span class="pln">ensureFileExists</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">nonHiddenFile<wbr/></span><span class="pun">.</span><span class="pln">isFileHidden</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">nonHiddenFile<wbr/></span><span class="pun">.</span><span class="pln">removeFileIfExists</span><span class="pun">);
 </span></code></pre>
 </section>
 

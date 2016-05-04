@@ -11,20 +11,32 @@
 	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
 							<li>
 								<a href="../../../raijin/types/boolean.html" class=" module">boolean</a>
 							</li>
 							<li>
+								<a href="../../../raijin/types/callbacks.html" class=" module">callbacks</a>
+							</li>
+							<li>
 								<a href="../../../raijin/types/dynamic.html" class=" module">dynamic</a>
 							</li>
 							<li>
 								<a href="../../../raijin/types/functions.html" class="selected module">functions</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/queue.html" class=" module">queue</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/records.html" class=" module">records</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/stack.html" class=" module">stack</a>
 							</li>
 						</ul>
 							</li>
@@ -90,7 +102,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function isBoolean</h1>
 			<section>
-				<p>Determines if a <a href="../../raijin/types/functions/isBoolean.html#value"><code class="lang-d"><span class="pln"><a href="../../../raijin/types/functions/isBoolean.html#value"><span class="pln">value</span></a></span></code></a> is of type boolean using 0, 1, true and false as qualifiers.
+				<p>Determines if a value is of type boolean using 0, 1, true and false as qualifiers.
 </p>
 <section></section>
 
@@ -104,18 +116,18 @@ $('#symbolSearchPane').show();
 								<br/>
 &nbsp;&nbsp;<span class="kwd">const </span><span class="typ">AllowNumericBooleanValues</span> <span class="pln">allowInteger</span> <span class="pun">=</span> <span class="typ">AllowNumericBooleanValues<wbr/></span><span class="pun">.</span><span class="pln">yes</span>
 								<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="pun">@</span><span class="pln">trusted</span><span class="pun">;</span>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="value">value</td><td> number or boolean string to use. Valid values of 0, 1, "0", "1", "true", "false"</td></tr>
-<tr><td id="allowInteger">allowInteger</td><td> Set to allowNumericBooleanValues.yes if a true/false <a href="../../../raijin/types/functions/isBoolean.html#value"><code class="lang-d"><span class="pln">value</span></code></a> can be a numeric 0 or 1</td></tr>
+<tr><td id="allowInteger">allowInteger</td><td> Set to allowNumericBooleanValues.yes if a true/false value can be a numeric 0 or 1</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>true if the <a href="../../../raijin/types/functions/isBoolean.html#value"><code class="lang-d"><span class="pln">value</span></code></a> is a boolean false otherwise.
+<p>true if the value is a boolean false otherwise.
 </p>
 </section>
 <section><h3>Example</h3>

@@ -11,20 +11,32 @@
 	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
 							<li>
 								<a href="../../../raijin/types/boolean.html" class=" module">boolean</a>
 							</li>
 							<li>
+								<a href="../../../raijin/types/callbacks.html" class=" module">callbacks</a>
+							</li>
+							<li>
 								<a href="../../../raijin/types/dynamic.html" class="selected module">dynamic</a>
 							</li>
 							<li>
 								<a href="../../../raijin/types/functions.html" class=" module">functions</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/queue.html" class=" module">queue</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/records.html" class=" module">records</a>
+							</li>
+							<li>
+								<a href="../../../raijin/types/stack.html" class=" module">stack</a>
 							</li>
 						</ul>
 							</li>
@@ -90,7 +102,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function getDynamicTypeFromString</h1>
 			<section>
-				<p>Converts a string to its appropriate type to be stored in a <a href="../../raijin/types/dynamic/DynamicType.html"><code class="lang-d"><span class="typ"><a href="../../../raijin/types/dynamic/DynamicType.html"><span class="typ">DynamicType</span></a></span></code></a>.
+				<p>Converts a string to its appropriate type to be stored in a DynamicType.
 </p>
 <section></section>
 
@@ -112,24 +124,24 @@ $('#symbolSearchPane').show();
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>The converted string as a <a href="../../../raijin/types/dynamic/DynamicType.html"><code class="lang-d"><span class="typ">DynamicType</span></code></a>.
+<p>The converted string as a DynamicType.
 </p>
 </section>
 <section><h3>Example</h3>
 <pre class="code"><code class="lang-d"><span class="kwd">const </span><span class="typ">string </span><span class="pln">strInt </span><span class="pun">= </span><span class="str">"90210"</span><span class="pun">;
-<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</a> </span><span class="pln">dynInt </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">strInt</span><span class="pun">);
+<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</span></a><span class="pln"> dynInt </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">strInt</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dynInt </span><span class="pun">== </span><span class="lit">90210</span><span class="pun">);
 
 </span><span class="kwd">const </span><span class="typ">string </span><span class="pln">strDec </span><span class="pun">= </span><span class="str">"90.210"</span><span class="pun">;
-<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</a> </span><span class="pln">dynDec </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">strDec</span><span class="pun">);
+<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</span></a><span class="pln"> dynDec </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">strDec</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dynDec </span><span class="pun">== </span><span class="lit">90.210</span><span class="pun">);
 
 </span><span class="kwd">const </span><span class="typ">string </span><span class="pln">strBool </span><span class="pun">= </span><span class="str">"true"</span><span class="pun">;
-<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</a> </span><span class="pln">dynBool </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">strBool</span><span class="pun">);
+<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</span></a><span class="pln"> dynBool </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">strBool</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dynBool </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
 
 </span><span class="kwd">const </span><span class="typ">string </span><span class="pln">str </span><span class="pun">= </span><span class="str">"My zip code is 90210"</span><span class="pun">;
-<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</a> </span><span class="pln">dynStr </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">str</span><span class="pun">);
+<a href="../../../raijin/types/dynamic/DynamicType.html"></span><span class="typ">DynamicType</span></a><span class="pln"> dynStr </span><span class="pun">= </span><span class="pln">getDynamicTypeFromString</span><span class="pun">(</span><span class="pln">str</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">dynStr </span><span class="pun">== </span><span class="pln">str</span><span class="pun">);
 </span></code></pre>
 </section>

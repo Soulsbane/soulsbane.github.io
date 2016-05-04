@@ -11,7 +11,7 @@
 	<body onload="setupDdox();">
 		<nav id="main-nav">
 						<ul class="tree-view">
-							<li class=" tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
@@ -21,10 +21,22 @@
 								<a href="../../raijin/types/boolean.html" class=" module">boolean</a>
 							</li>
 							<li>
+								<a href="../../raijin/types/callbacks.html" class=" module">callbacks</a>
+							</li>
+							<li>
 								<a href="../../raijin/types/dynamic.html" class=" module">dynamic</a>
 							</li>
 							<li>
 								<a href="../../raijin/types/functions.html" class=" module">functions</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/queue.html" class=" module">queue</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/records.html" class=" module">records</a>
+							</li>
+							<li>
+								<a href="../../raijin/types/stack.html" class=" module">stack</a>
 							</li>
 						</ul>
 							</li>
@@ -104,18 +116,18 @@ $('#symbolSearchPane').show();
 								<br/>
 &nbsp;&nbsp;<span class="pln">T</span> <span class="pln">defaultValue</span> <span class="pun">=</span> <span class="pln">T<wbr/></span><span class="pun">.</span><span class="pln">init</span>
 								<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="pun">@</span><span class="pln">safe</span><span class="pun">;</span>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe</span><span class="pun">;</span>
 							</code>
 						</div>
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="index">index</td><td> The integer value denoting the number of the argument passed.</td></tr>
-<tr><td id="defaultValue">defaultValue</td><td> Default value to use if the <a href="../../raijin/commandlineargs/CommandLineArgs.safeGet.html#index"><code class="lang-d"><span class="pln">index</span></code></a> is out of range.</td></tr>
+<tr><td id="defaultValue">defaultValue</td><td> Default value to use if the index is out of range.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>The value of the command line argument at <a href="../../raijin/commandlineargs/CommandLineArgs.safeGet.html#index"><code class="lang-d"><span class="pln">index</span></code></a> or <a href="../../raijin/commandlineargs/CommandLineArgs.safeGet.html#defaultValue"><code class="lang-d"><span class="pln">defaultValue</span></code></a> otherwise.
+<p>The value of the command line argument at index or defaultValue otherwise.
 </p>
 </section>
 
