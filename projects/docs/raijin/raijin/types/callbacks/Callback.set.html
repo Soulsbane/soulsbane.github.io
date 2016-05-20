@@ -14,6 +14,14 @@
 							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
 							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
@@ -102,9 +110,11 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function Callback.set</h1>
 			<section>
-				<p>Sets the callback used with opCall
+				<p>Sets the callback used with opCall. If the callback already contains a valid function/method this call will fail
+		to override the callback already stored. To override use forceOverWrite argument set to true;
 </p>
 <section><p>callback = The callback function/delegate to use with opCall.
+		forceOverWrite = If true, thhe callback stored will be overwritten with this call.
 </p>
 </section>
 
@@ -114,7 +124,9 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="typ">void</span> <span class="pln">set</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">callback</span>
+&nbsp;&nbsp;<span class="pln">T</span> <span class="pln">callback</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="kwd">const </span><span class="typ">bool</span> <span class="pln">forceOverWrite</span> <span class="pun">=</span> <span class="kwd">false</span>
 								<br/>
 <span class="pun">)</span><span class="pln"> </span><span class="kwd">pure @safe</span><span class="pun">;</span>
 							</code>

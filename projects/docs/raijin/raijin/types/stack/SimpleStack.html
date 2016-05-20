@@ -14,6 +14,14 @@
 							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
 							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
@@ -115,6 +123,15 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../../raijin/types/stack/SimpleStack.all.html" class="public">
+										<code>all</code>
+									</a>
+								</td>
+								<td>Returns the entire queue array.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../../raijin/types/stack/SimpleStack.clear.html" class="public">
 										<code>clear</code>
 									</a>
@@ -175,6 +192,9 @@ $('#symbolSearchPane').show();
 </span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);
 </span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="lit">2</span><span class="pun">);
 </span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">push</span><span class="pun">(</span><span class="lit">3</span><span class="pun">);
+
+</span><span class="kwd">foreach</span><span class="pun">(</span><span class="pln">value</span><span class="pun">; </span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">all</span><span class="pun">) {}
+
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">3</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">stack<wbr/></span><span class="pun">.</span><span class="pln">pop</span><span class="pun">() == </span><span class="lit">3</span><span class="pun">);

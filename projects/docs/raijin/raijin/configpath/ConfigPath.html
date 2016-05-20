@@ -15,6 +15,14 @@
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
 							<li>
@@ -152,11 +160,11 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/configpath/ConfigPath.getBaseConfigDir.html" class="public">
-										<code>getBaseConfigDir</code>
+									<a href="../../raijin/configpath/ConfigPath.getAppConfigDir.html" class="public">
+										<code>getAppConfigDir</code>
 									</a>
 								</td>
-								<td>Retrieves the path to the users config directory.
+								<td>Retrieves the path to the applicationName's config directory.
 </td>
 							</tr>
 							<tr>
@@ -166,6 +174,15 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Retrieves the path to the users config directory with an optional path appended to the end.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/configpath/ConfigPath.removeAllConfigDirs.html" class="public">
+										<code>removeAllConfigDirs</code>
+									</a>
+								</td>
+								<td>Removes all directories under applicationName including applicationName.
 </td>
 							</tr>
 							<tr>
@@ -180,13 +197,18 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">path </span><span class="pun">= </span><span class="typ">ConfigPath</span><span class="pun">(</span><span class="str">"DlangUnitOrg"</span><span class="pun">, </span><span class="str">"MyUnitTestApp"</span><span class="pun">);
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio </span><span class="pun">: </span><span class="pln">writeln</span><span class="pun">;
 
-</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio </span><span class="pun">: </span><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"&lt;=====================Beginning test for configpath module=====================&gt;"</span><span class="pun">);
 
-</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Testing ConfigPath..."</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">path </span><span class="pun">= </span><span class="typ">ConfigPath</span><span class="pun">(</span><span class="str">"DlangUnitOrg"</span><span class="pun">, </span><span class="str">"MyUnitTestApp"</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">createConfigDir</span><span class="pun">(</span><span class="str">"tests"</span><span class="pun">));
 </span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">getConfigDir</span><span class="pun">(</span><span class="str">"tests"</span><span class="pun">));
-</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">getBaseConfigDir</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">getAppConfigDir</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">removeConfigDir</span><span class="pun">(</span><span class="str">"tests"</span><span class="pun">));
+</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">removeAllConfigDirs</span><span class="pun">();
 
 </span><span class="pln">writeln</span><span class="pun">();
 </span></code></pre>

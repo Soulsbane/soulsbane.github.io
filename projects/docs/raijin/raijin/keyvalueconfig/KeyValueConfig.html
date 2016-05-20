@@ -15,6 +15,14 @@
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
 							<li>
@@ -263,7 +271,10 @@ $('#symbolSearchPane').show();
 						</table>
 					</section>
 <section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">text </span><span class="pun">= </span><span class="str">"
+<pre class="code"><code class="lang-d"><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"&lt;=====================Beginning test for keyvalueconfig module=====================&gt;"</span><span class="pun">);
+
+</span><span class="typ">string </span><span class="pln">text </span><span class="pun">= </span><span class="str">"
 	aBool=true
 	decimal = 3443.443
 	number=12071
@@ -286,8 +297,11 @@ $('#symbolSearchPane').show();
 
 </span><span class="typ">KeyValueConfig </span><span class="pln">config</span><span class="pun">;
 
-</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">loaded </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">text</span><span class="pun">);
+</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">loaded </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">text</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
+</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">failLoaded </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="str">""</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
+
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">loaded</span><span class="pun">, </span><span class="str">"Failed to load string!"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">failLoaded</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">containsGroup</span><span class="pun">(</span><span class="str">"section"</span><span class="pun">));
 </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">removeGroup</span><span class="pun">(</span><span class="str">"section"</span><span class="pun">);
@@ -298,7 +312,7 @@ $('#symbolSearchPane').show();
 
 </span><span class="kwd">immutable auto </span><span class="pln">number </span><span class="pun">= </span><span class="pln">config</span><span class="pun">[</span><span class="str">"number"</span><span class="pun">];
 
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">number </span><span class="pun">== </span><span class="lit">12071</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">number </span><span class="pun">== </span><span class="lit">12_071</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"decimal"</span><span class="pun">] == </span><span class="lit">3443.443</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"another.world"</span><span class="pun">));
@@ -312,6 +326,12 @@ $('#symbolSearchPane').show();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"number"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"another.japan"</span><span class="pun">] == </span><span class="kwd">false</span><span class="pun">);
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">set</span><span class="pun">(</span><span class="str">"another.japan"</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"another.japan"</span><span class="pun">] == </span><span class="kwd">true</span><span class="pun">);
+</span><span class="pln">config</span><span class="pun">[</span><span class="str">"another.japan"</span><span class="pun">] = </span><span class="kwd">false</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="str">"another.japan"</span><span class="pun">) == </span><span class="kwd">false</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="str">"another.nippon"</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">) == </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="str">"japan"</span><span class="pun">, </span><span class="str">"nippon"</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">) == </span><span class="kwd">true</span><span class="pun">);
 
 </span><span class="com">// Tests for nonexistent keys
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">asString</span><span class="pun">(</span><span class="str">"nonexistent"</span><span class="pun">, </span><span class="str">"Value doesn't exist!"</span><span class="pun">) == </span><span class="str">"Value doesn't exist!"</span><span class="pun">);
@@ -334,8 +354,17 @@ $('#symbolSearchPane').show();
 </span><span class="pln">config</span><span class="pun">[</span><span class="str">"aBool"</span><span class="pun">] = </span><span class="kwd">true</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config</span><span class="pun">[</span><span class="str">"aBool"</span><span class="pun">]<wbr/>.</span><span class="pln">asString </span><span class="pun">== </span><span class="str">"true"</span><span class="pun">);
 
+</span><span class="kwd">import <a href="../../raijin/utils/file.html"></span><span class="pln">raijin<wbr/></span><span class="pun">.</span><span class="pln">utils<wbr/></span><span class="pun">.</span><span class="pln">file</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">removeFileIfExists</span><span class="pun">;
+</span><span class="kwd">immutable </span><span class="pln">fileName </span><span class="pun">= </span><span class="str">"custom-config-format.dat"</span><span class="pun">;
+
+</span><span class="pln">removeFileIfExists</span><span class="pun">(</span><span class="pln">fileName</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadFile</span><span class="pun">(</span><span class="pln">fileName</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">));
 </span><span class="kwd">debug </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">();
-</span><span class="kwd">debug </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="str">"custom-config-format.dat"</span><span class="pun">);
+</span><span class="kwd">debug </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">(</span><span class="pln">fileName</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadFile</span><span class="pun">(</span><span class="pln">fileName</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">));
+
+</span><span class="pln">removeFileIfExists</span><span class="pun">(</span><span class="pln">fileName</span><span class="pun">);
+</span><span class="pln">removeFileIfExists</span><span class="pun">(</span><span class="pln">DEFAULT_CONFIG_FILE_NAME</span><span class="pun">);
 
 </span><span class="typ">string </span><span class="pln">noEqualSign </span><span class="pun">= </span><span class="str">"
 	equal=sign
@@ -343,7 +372,7 @@ $('#symbolSearchPane').show();
 	This is a really long sentence to test for a really long value string!
 "</span><span class="pun">;
 
-</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">equalSignValue </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">noEqualSign</span><span class="pun">);
+</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">equalSignValue </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">noEqualSign</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equalSignValue </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
 
 </span><span class="typ">string </span><span class="pln">invalidGroup </span><span class="pun">= </span><span class="str">"
@@ -354,8 +383,14 @@ $('#symbolSearchPane').show();
 	another=key value is here
 "</span><span class="pun">;
 
-</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">invalidGroupValue </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">invalidGroup</span><span class="pun">);
+</span><span class="kwd">immutable </span><span class="typ">bool </span><span class="pln">invalidGroupValue </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">loadString</span><span class="pun">(</span><span class="pln">invalidGroup</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">invalidGroupValue </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">groups </span><span class="pun">= </span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">getGroups</span><span class="pun">();
+
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"Generating asByte method string:"</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">generateAsMethodFor</span><span class="pun">!</span><span class="typ">byte</span><span class="pun">(</span><span class="str">"asByte"</span><span class="pun">));
+</span><span class="pln">writeln</span><span class="pun">;
 </span></code></pre>
 </section>
 

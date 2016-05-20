@@ -14,6 +14,14 @@
 							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
 							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
@@ -263,6 +271,22 @@ $('#symbolSearchPane').show();
 
 </span><span class="typ">DynamicType </span><span class="pln">propBoolean </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">propBoolean<wbr/></span><span class="pun">.</span><span class="pln">boolean </span><span class="pun">== </span><span class="kwd">true</span><span class="pun">);
+
+</span><span class="typ">string</span><span class="pun">[</span><span class="typ">DynamicType</span><span class="pun">] </span><span class="pln">hashInt</span><span class="pun">;
+</span><span class="pln">hashInt</span><span class="pun">[</span><span class="pln">propInteger</span><span class="pun">] = </span><span class="str">"an integer"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hashInt</span><span class="pun">[</span><span class="pln">propInteger</span><span class="pun">] == </span><span class="str">"an integer"</span><span class="pun">);
+
+</span><span class="typ">string</span><span class="pun">[</span><span class="typ">DynamicType</span><span class="pun">] </span><span class="pln">hashStr</span><span class="pun">;
+</span><span class="pln">hashStr</span><span class="pun">[</span><span class="pln">propStr</span><span class="pun">] = </span><span class="str">"an string"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hashStr</span><span class="pun">[</span><span class="pln">propStr</span><span class="pun">] == </span><span class="str">"an string"</span><span class="pun">);
+
+</span><span class="typ">string</span><span class="pun">[</span><span class="typ">DynamicType</span><span class="pun">] </span><span class="pln">hashDec</span><span class="pun">;
+</span><span class="pln">hashDec</span><span class="pun">[</span><span class="pln">propDec</span><span class="pun">] = </span><span class="str">"an decimal"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hashDec</span><span class="pun">[</span><span class="pln">propDec</span><span class="pun">] == </span><span class="str">"an decimal"</span><span class="pun">);
+
+</span><span class="typ">string</span><span class="pun">[</span><span class="typ">DynamicType</span><span class="pun">] </span><span class="pln">hashBoolean</span><span class="pun">;
+</span><span class="pln">hashBoolean</span><span class="pun">[</span><span class="pln">propBoolean</span><span class="pun">] = </span><span class="str">"an boolean"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">hashBoolean</span><span class="pun">[</span><span class="pln">propBoolean</span><span class="pun">] == </span><span class="str">"an boolean"</span><span class="pun">);
 </span></code></pre>
 </section>
 

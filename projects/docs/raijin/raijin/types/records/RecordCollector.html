@@ -14,6 +14,14 @@
 							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
 							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
@@ -183,7 +191,12 @@ $('#symbolSearchPane').show();
 }</span></code></pre>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="kwd">immutable </span><span class="typ">string </span><span class="pln">data </span><span class="pun">=
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio </span><span class="pun">: </span><span class="pln">writeln</span><span class="pun">;
+
+</span><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"&lt;=====================Beginning test for records module=====================&gt;"</span><span class="pun">);
+
+</span><span class="kwd">immutable </span><span class="typ">string </span><span class="pln">data </span><span class="pun">=
 </span><span class="str">q{
 	{
 		firstName "Albert"
@@ -223,6 +236,11 @@ $('#symbolSearchPane').show();
 	}
 }</span><span class="pun">;
 
+</span><span class="kwd">import <a href="../../../raijin/utils/file.html"></span><span class="pln">raijin<wbr/></span><span class="pun">.</span><span class="pln">utils<wbr/></span><span class="pun">.</span><span class="pln">file</span></a><span class="pln"> </span><span class="pun">: </span><span class="pln">ensureFileExists</span><span class="pun">, </span><span class="pln">removeFileIfExists</span><span class="pun">;
+
+</span><span class="kwd">enum </span><span class="pln">fileName </span><span class="pun">= </span><span class="str">"test-record.dat"</span><span class="pun">;
+</span><span class="pln">fileName<wbr/></span><span class="pun">.</span><span class="pln">ensureFileExists</span><span class="pun">(</span><span class="pln">variedData</span><span class="pun">);
+
 </span><span class="kwd">struct </span><span class="typ">VariedData
 </span><span class="pun">{
 	</span><span class="typ">string </span><span class="pln">name</span><span class="pun">;
@@ -230,7 +248,7 @@ $('#symbolSearchPane').show();
 }
 
 </span><span class="typ">RecordCollector</span><span class="pun">!</span><span class="typ">VariedData </span><span class="pln">variedCollector</span><span class="pun">;
-</span><span class="pln">variedCollector<wbr/></span><span class="pun">.</span><span class="pln">parse</span><span class="pun">(</span><span class="pln">variedData</span><span class="pun">);
+</span><span class="pln">variedCollector<wbr/></span><span class="pun">.</span><span class="pln">parseFile</span><span class="pun">(</span><span class="pln">fileName</span><span class="pun">);
 
 </span><span class="kwd">auto </span><span class="pln">variedRecords </span><span class="pun">= </span><span class="pln">variedCollector<wbr/></span><span class="pun">.</span><span class="pln">getRecords</span><span class="pun">();
 
@@ -242,6 +260,7 @@ $('#symbolSearchPane').show();
 
 </span><span class="pln">variedCollector<wbr/></span><span class="pun">.</span><span class="pln">dump</span><span class="pun">();
 </span><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">fileName<wbr/></span><span class="pun">.</span><span class="pln">removeFileIfExists</span><span class="pun">;
 </span></code></pre>
 </section>
 

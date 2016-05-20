@@ -14,6 +14,14 @@
 							<li class="tree-view">
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
 							<li class="tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
@@ -116,6 +124,15 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../../raijin/types/callbacks/Callback.get.html" class="public">
+										<code>get</code>
+									</a>
+								</td>
+								<td>Gets the underlying delegate/function.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../../raijin/types/callbacks/Callback.isSet.html" class="public">
 										<code>isSet</code>
 									</a>
@@ -125,11 +142,21 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../../raijin/types/callbacks/Callback.opCall.html" class="public">
+										<code>opCall</code>
+									</a>
+								</td>
+								<td>An overload for calling the registered function/delegate.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../../raijin/types/callbacks/Callback.set.html" class="public">
 										<code>set</code>
 									</a>
 								</td>
-								<td>Sets the callback used with opCall
+								<td>Sets the callback used with opCall. If the callback already contains a valid function/method this call will fail
+		to override the callback already stored. To override use forceOverWrite argument set to true;
 </td>
 							</tr>
 							<tr>
@@ -186,7 +213,12 @@ $('#symbolSearchPane').show();
 }</span></code></pre>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="typ">void </span><span class="pln">voidFunc</span><span class="pun">()
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio </span><span class="pun">: </span><span class="pln">writeln</span><span class="pun">;
+
+</span><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"&lt;=====================Beginning test for callbacks module=====================&gt;"</span><span class="pun">);
+
+</span><span class="typ">void </span><span class="pln">voidFunc</span><span class="pun">()
 {
 	</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio </span><span class="pun">: </span><span class="pln">writeln</span><span class="pun">;
 	</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"A voidFunc call."</span><span class="pun">);
@@ -195,8 +227,15 @@ $('#symbolSearchPane').show();
 </span><span class="kwd">alias </span><span class="typ">VoidCall </span><span class="pun">= </span><span class="typ">void </span><span class="kwd">delegate</span><span class="pun">(); </span><span class="com">// This could be a function. Unittests won't allow function pointers inside its block.
 </span><span class="typ">Callback</span><span class="pun">!</span><span class="typ">VoidCall </span><span class="pln">voidCall</span><span class="pun">;
 
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">voidCall<wbr/></span><span class="pun">.</span><span class="pln">isSet</span><span class="pun">);
 </span><span class="pln">voidCall<wbr/></span><span class="pun">.</span><span class="pln">set</span><span class="pun">(&amp;</span><span class="pln">voidFunc</span><span class="pun">);
 </span><span class="pln">voidCall</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">voidCall<wbr/></span><span class="pun">.</span><span class="pln">isSet</span><span class="pun">);
+
+</span><span class="pln">voidCall<wbr/></span><span class="pun">.</span><span class="pln">stop</span><span class="pun">();
+</span><span class="pln">voidCall</span><span class="pun">(); </span><span class="com">// The function won't be called
+</span><span class="pln">voidCall<wbr/></span><span class="pun">.</span><span class="pln">start</span><span class="pun">();
+</span><span class="pln">voidCall</span><span class="pun">(); </span><span class="com">// The function can be called again.
 
 </span><span class="typ">int </span><span class="pln">intFunc</span><span class="pun">()
 {
@@ -213,6 +252,7 @@ $('#symbolSearchPane').show();
 
 </span><span class="kwd">immutable </span><span class="typ">int </span><span class="pln">value </span><span class="pun">= </span><span class="pln">intCall</span><span class="pun">();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">value </span><span class="pun">== </span><span class="lit">0</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">intCall<wbr/></span><span class="pun">.</span><span class="pln">get</span><span class="pun">()() == </span><span class="lit">0</span><span class="pun">);
 </span></code></pre>
 </section>
 
