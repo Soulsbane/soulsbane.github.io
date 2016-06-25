@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function KeyValueConfig.save</title>
+		<title>KeyValueConfig.save - multiple declarations</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
@@ -108,8 +108,28 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function KeyValueConfig.save</h1>
+			<h1>KeyValueConfig.save - multiple declarations</h1>
+			<ul>
+				<li>Function KeyValueConfig.save</li>
+				<li>Function KeyValueConfig.save</li>
+			</ul>
 			<section>
+				<h2>Function KeyValueConfig.save</h2>
+				<p>Saves config values to the config file used when loading(loadFile).
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">save<span class="pun">()</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+
+			</section>
+			<section>
+				<h2>Function KeyValueConfig.save</h2>
 				<p>Saves config values to the config file.
 </p>
 <section></section>
@@ -120,7 +140,7 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="typ">void</span> <span class="pln">save</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="str">"app.config"</span>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span>
 								<br/>
 <span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
 							</code>
@@ -128,7 +148,7 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="fileName">fileName</td><td> Name of the file which values will be stored. "app.config" by default.</td></tr>
+<tr><td id="fileName">fileName</td><td> Name of the file which values will be stored.</td></tr>
 </table>
 </section>
 

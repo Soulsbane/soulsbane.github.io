@@ -120,7 +120,7 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="typ">bool</span> <span class="pln">isVowelChar</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="typ">char</span> <span class="pln">vowelChar</span>
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">)</span> <span class="pln">vowelChar</span>
 								<br/>
 <span class="pun">)</span><span class="pln"> </span><span class="kwd">pure @safe</span><span class="pun">;</span>
 							</code>
@@ -141,6 +141,8 @@ $('#symbolSearchPane').show();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="str">'i'<wbr/></span><span class="pun">.</span><span class="pln">isVowelChar</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="str">'o'<wbr/></span><span class="pun">.</span><span class="pln">isVowelChar</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="str">'u'<wbr/></span><span class="pun">.</span><span class="pln">isVowelChar</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">'b'<wbr/></span><span class="pun">.</span><span class="pln">isVowelChar </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">'z'<wbr/></span><span class="pun">.</span><span class="pln">isVowelChar </span><span class="pun">== </span><span class="kwd">false</span><span class="pun">);
 </span></code></pre>
 </section>
 

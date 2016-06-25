@@ -15,6 +15,14 @@
 								<a href="#" class="package">raijin</a>
 						<ul class="tree-view">
 							<li class="collapsed tree-view">
+								<a href="#" class="package">patterns</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../../raijin/patterns/signals.html" class=" module">signals</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
 								<a href="#" class="package">types</a>
 						<ul class="tree-view">
 							<li>
@@ -117,7 +125,7 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="typ">string</span> <span class="pln">pluralize</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">text</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">word</span><span class="pun">,</span>
 								<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">pluralizeToWord</span> <span class="pun">=</span> <span class="kwd">null</span>
 								<br/>
@@ -127,7 +135,7 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="text">text</td><td> The word to pluralize.</td></tr>
+<tr><td id="word">word</td><td> The word to pluralize.</td></tr>
 <tr><td id="pluralizeToWord">pluralizeToWord</td><td> The word to use when a value needs to be pluralized</td></tr>
 </table>
 </section>
@@ -149,7 +157,7 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="typ">string</span> <span class="pln">pluralize</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">text</span><span class="pun">,</span>
+&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">word</span><span class="pun">,</span>
 								<br/>
 &nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">ulong</span><span class="pun">)</span> <span class="pln">count</span><span class="pun">,</span>
 								<br/>
@@ -161,7 +169,7 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="text">text</td><td> The word to pluralize.</td></tr>
+<tr><td id="word">word</td><td> The word to pluralize.</td></tr>
 <tr><td id="count">count</td><td> The number of words.</td></tr>
 <tr><td id="pluralizeToWord">pluralizeToWord</td><td> The word to use when a value needs to be pluralized</td></tr>
 </table>
@@ -171,17 +179,19 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="str">"fly"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"flies"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"fly"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">1</span><span class="pun">) == </span><span class="str">"fly"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"book"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"books"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"book"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">1</span><span class="pun">) == </span><span class="str">"book"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"boy"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">2</span><span class="pun">) == </span><span class="str">"boys"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"key"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">2</span><span class="pun">) == </span><span class="str">"keys"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"key"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">2</span><span class="pun">, </span><span class="str">"keyz"</span><span class="pun">) == </span><span class="str">"keyz"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"key"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">1</span><span class="pun">, </span><span class="str">"keyz"</span><span class="pun">) == </span><span class="str">"key"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"fly"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="lit">2</span><span class="pun">, </span><span class="str">"fliez"</span><span class="pun">) == </span><span class="str">"fliez"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"cat"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pln"> </span><span class="pun">== </span><span class="str">"cats"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"cat"<a href="../../../raijin/utils/string/pluralize.html"></span><wbr/><span class="pun">.</span><span class="pln">pluralize</span></a><span class="pun">(</span><span class="str">"catz"</span><span class="pun">) == </span><span class="str">"catz"</span><span class="pun">);
+<pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="str">"fly"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"flies"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"fly"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">1</span><span class="pun">) == </span><span class="str">"fly"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"book"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"books"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"book"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">1</span><span class="pun">) == </span><span class="str">"book"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"boy"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">2</span><span class="pun">, </span><span class="str">"boys"</span><span class="pun">) == </span><span class="str">"boys"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"key"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">2</span><span class="pun">, </span><span class="str">"keyz"</span><span class="pun">) == </span><span class="str">"keyz"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"key"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">1</span><span class="pun">, </span><span class="str">"keyz"</span><span class="pun">) == </span><span class="str">"key"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"fly"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">2</span><span class="pun">, </span><span class="str">"fliez"</span><span class="pun">) == </span><span class="str">"fliez"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"cat"<wbr/></span><span class="pun">.</span><span class="pln">pluralize </span><span class="pun">== </span><span class="str">"cats"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"cat"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="str">"catz"</span><span class="pun">) == </span><span class="str">"catz"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"half"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"halves"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"zoo"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"zoos"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="str">"boss"<wbr/></span><span class="pun">.</span><span class="pln">pluralize</span><span class="pun">(</span><span class="lit">10</span><span class="pun">) == </span><span class="str">"bosses"</span><span class="pun">);
 </span></code></pre>
 </section>
 

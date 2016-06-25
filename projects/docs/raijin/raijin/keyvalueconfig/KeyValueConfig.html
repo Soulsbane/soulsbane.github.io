@@ -151,29 +151,47 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroup.html" class="public">
-										<code>getGroup</code>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html" class="public">
+										<code>get</code>
 									</a>
 								</td>
-								<td>Retrieves key/values associated with the group portion of a config file/string.
+								<td>Retrieves the value T associated with key where T is the designated type to be converted to.
 </td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroups.html" class="public">
-										<code>getGroups</code>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html" class="public">
+										<code>get</code>
 									</a>
 								</td>
-								<td>Retrieves an array containing key/values of all groups in the configfile omitting groupless key/values.
+								<td>Retrieves the value T associated with key where T is the designated type to be converted to.
 </td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupValue.html" class="public">
-										<code>getGroupValue</code>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.get.html" class="public">
+										<code>get</code>
 									</a>
 								</td>
-								<td>Gets the value associated with the group and key.
+								<td>Retrieves the value T associated with key where T is the designated type to be converted to.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.getGroupAndKeyFromString.html" class="public">
+										<code>getGroupAndKeyFromString</code>
+									</a>
+								</td>
+								<td>Retrieves the group and key from a string in the form of group.key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.isGroupString.html" class="public">
+										<code>isGroupString</code>
+									</a>
+								</td>
+								<td>Determines if the group string is in the form of group.key.
 </td>
 							</tr>
 							<tr>
@@ -214,6 +232,15 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.processText.html" class="public">
+										<code>processText</code>
+									</a>
+								</td>
+								<td>Processes the text found in config file into an array of KeyValueData structures.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../raijin/keyvalueconfig/KeyValueConfig.remove.html" class="public">
 										<code>remove</code>
 									</a>
@@ -239,6 +266,15 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Removes a group from the config file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../raijin/keyvalueconfig/KeyValueConfig.save.html" class="public">
+										<code>save</code>
+									</a>
+								</td>
+								<td>Saves config values to the config file used when loading(loadFile).
 </td>
 							</tr>
 							<tr>

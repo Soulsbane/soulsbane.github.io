@@ -180,6 +180,36 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio </span><span class="pun">: </span><span class="pln">writeln</span><span class="pun">;
+
+</span><span class="pln">writeln</span><span class="pun">;
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="str">"&lt;=====================Beginning test for appconfig module=====================&gt;"</span><span class="pun">);
+
+</span><span class="typ">string </span><span class="pln">data </span><span class="pun">=
+</span><span class="str">q{
+	key=value
+}</span><span class="pun">;
+
+</span><span class="typ">AppConfig </span><span class="pln">config</span><span class="pun">;
+
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">create</span><span class="pun">(</span><span class="str">"DlangUnitOrg"</span><span class="pun">, </span><span class="str">"AppConfigUnitTest"</span><span class="pun">, </span><span class="pln">data</span><span class="pun">);
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">getAppConfigDir</span><span class="pun">());
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">asString</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">) == </span><span class="str">"value"</span><span class="pun">);
+
+</span><span class="pln">config<wbr/></span><span class="pun">.</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">removeAllConfigDirs</span><span class="pun">();
+
+</span><span class="typ">AppConfig </span><span class="pln">config2 </span><span class="pun">= </span><span class="typ">AppConfig</span><span class="pun">(</span><span class="str">"DlangUnitOrg"</span><span class="pun">, </span><span class="str">"AppConfigUnitTest"</span><span class="pun">, </span><span class="pln">data</span><span class="pun">);
+
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">config2<wbr/></span><span class="pun">.</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">getAppConfigDir</span><span class="pun">());
+</span><span class="pln">writeln</span><span class="pun">(</span><span class="pln">config2<wbr/></span><span class="pun">.</span><span class="pln">getAppConfigDir</span><span class="pun">()); </span><span class="com">// Sugar! Uses opDispatch.
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config2<wbr/></span><span class="pun">.</span><span class="pln">config</span><span class="pun">[</span><span class="str">"key"</span><span class="pun">] == </span><span class="str">"value"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">config2<wbr/></span><span class="pun">.</span><span class="pln">asString</span><span class="pun">(</span><span class="str">"key"</span><span class="pun">) == </span><span class="str">"value"</span><span class="pun">); </span><span class="com">// Sugar! Uses opDispatch.
+
+</span><span class="pln">config2<wbr/></span><span class="pun">.</span><span class="pln">path<wbr/></span><span class="pun">.</span><span class="pln">removeAllConfigDirs</span><span class="pun">();
+</span></code></pre>
+</section>
 
 			</section>
 			<section>
